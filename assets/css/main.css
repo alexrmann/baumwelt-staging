@@ -1,0 +1,2348 @@
+@charset "UTF-8";
+@media print {
+  /* Other possible items to remove. */
+  /* ==========================================================================
+     Print styles from HTML5 Boilerplate.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*  
+
+~~~~~~~~~~~~~~~~~~
+~~~ CSS RESETS ~~~
+~~~~~~~~~~~~~~~~~~
+
+Last updated: 11/23/2025
+
+Sources: 
+https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/
+https://css-tricks.com/box-sizing/
+https://www.joshwcomeau.com/css/custom-css-reset/
+
+*/
+/* Manage UI affordance differently by removing all border defaults . */
+* {
+  border: none;
+}
+
+/* Pseudo elements inherit their parent's box model. */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Set current and legacy box model type. */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Clear default browser padding and margin. */
+html,
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevents media from blowing up their containers. */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+/* Balance text wrapping on headings */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* --- Reset (most) lists --- Whether you’re using ordered lists (ol), unordered lists (ul), or menus (<menu>), it’s unlikely that you’ll want the list markers (i.e., bullets, numbers, etc.,) that come with them since they look rather unsightly on user interfaces. The following snippet removes them, but not from those used in articles where it makes sense to use them in their natural form. */
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+/* TIP: Add the role="list" attribute-value to all lists that you’d like screen readers to announce as such, because list-style: none; disables this ability in some web browsers. */
+/* Remove lists' default padding-inline-start: */
+menu,
+ol,
+ul {
+  padding-inline-start: 0;
+}
+
+/* Additionally, since list markers appear on the outside of lists, removing the padding using the snippet above can cause the list markers (the ones used in articles that we’re not resetting) to overlap neighboring content or overflow the viewport, so you’ll want to switch them to the inside instead: */
+article ol,
+article ul {
+  list-style-position: inside;
+}
+
+/* Nested list items indent relative to their parent. */
+li li {
+  padding-inline-start: 1em;
+}
+
+/* 
+---------------------------
+- ENHANCE LINK UNDERLINES -
+--------------------------- */
+a {
+  /* text-decoration: none; Uncomment to remove underlines */
+  text-underline-position: under; /* Places underlines below the descenders */
+  text-decoration-thickness: 8; /* Sets the thickness as a percentage of the font size */
+}
+
+/* Remove underline from footnotes */
+sub a,
+sup a,
+.footnote li a {
+  text-decoration: none;
+}
+
+/* Disable the text inflation algorithm */
+html {
+  -moz-text-size-adjust: none; /* for Firefox */
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+}
+
+/* Instead of instantly snapping to same-page anchors and text fragments, scroll-behavior: smooth; enables users to scroll to them smoothly. Also, to cater to those that prefer reduced motion for accessibility reasons, the rule is wrapped in a prefers-reduced-motion: no-preference media query. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    interpolate-size: allow-keywords; /* Enable keyword animations */
+  }
+}
+/* We set :focus styles globally by modifying how the outline looks. This means that any element that can receive focus, such as <a> and <button> will have a consistent focus style. The outline-offset pulls the outline away from the content a bit, which in my opinion, makes it more user-friendly. */
+:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 0.2rem;
+}
+
+/* REMOVE FOCUS OUTLINE FOR MOUSE USERS but keep it for keyboard users. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ADD POINTER CURSOR to interactive elements that don’t already have an alternative cursor. */
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+  cursor: pointer;
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~ HTML Semantic Elements ~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~ Defaults ~~  */
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  color: light-dark(var(--color-text-light), var(--color-text-dark));
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: none;
+  margin-block-start: none;
+}
+
+/*  ~~ Headings ~~  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+  line-height: 1;
+}
+
+h1 {
+  font-family: var(--font-headings-alt);
+  text-transform: uppercase;
+  margin-block-end: 0.25em;
+  font-size: var(--font-size-6);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--font-headings);
+  margin-block-end: 0.25em;
+  font-size: var(--font-size-5);
+  font-weight: 400;
+}
+
+h3 {
+  font-family: var(--font-headings-alt);
+  margin-block-start: 0.5em;
+  margin-block-end: 0.25em;
+  font-size: var(--font-size-3);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: var(--font-headings);
+  font-size: var(--font-size-2);
+  font-weight: 400;
+  margin-block-start: 2rem;
+  line-height: var(--font-size-2);
+}
+
+h5 {
+  font-family: var(--font-headings-alt);
+  font-size: var(--font-size-1);
+  font-weight: 400;
+  line-height: var(--font-size-3);
+}
+
+h6 {
+  font-size: var(--font-size-0);
+  font-weight: 300;
+  line-height: var(--font-size-0);
+}
+
+/* ~~~ Paragraphs ~~~ */
+p {
+  font-size: var(--font-size-0);
+  font-weight: 400;
+  color: var(--ltdk-clr-txt);
+}
+
+p:not(:last-child) {
+  margin-bottom: 1rem;
+  margin-block-end: 1rem;
+}
+
+/* ~~~ Lists ~~~ */
+ul,
+ol {
+  font-family: var(--font-sans);
+}
+
+li {
+  font-family: var(--font-sans);
+}
+
+li:not(:last-child) {
+  margin-bottom: 1rem;
+  margin-block-end: 1rem;
+}
+
+/*  ~~ Code Blocks & Preformatted Text ~~  */
+code {
+  font-family: var(--font-code);
+  background-color: var(--color-code-background);
+  padding: 0;
+  padding-block-start: 0.2em;
+  padding-block-end: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
+}
+
+code:before,
+code:after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+
+pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+pre {
+  padding: 1rem;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  margin-block-end: 1rem;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+pre code:before,
+pre code:after {
+  content: normal;
+}
+
+/*  ~~ Horizontal Rule ~~  */
+/* Determine best practice between border styling vs. background styling. */
+/* Background styling */
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  background-color: var(--ltdk-clr-txt);
+  height: 2px;
+}
+
+/* Border styling */
+/* hr {
+  border: 1px solid black;
+} */ /*  */
+/*  ~~ Hyperlinks ~~  */
+a {
+  color: currentColor;
+  font-weight: 400;
+  text-decoration-thickness: 2px;
+}
+
+a:hover,
+a:hover img {
+  color: var(--ltdk-clr-hlt-txt);
+}
+
+/* Underline links on hover */
+header nav a::after {
+  content: "";
+  width: 100%;
+  opacity: 0;
+  height: 2px;
+  display: block;
+  background: currentColor;
+}
+
+header nav a:hover::after {
+  background-color: var(--color-highlight);
+  opacity: 1;
+}
+
+/*  ~~ Blockquotes ~~  */
+blockquote {
+  background: #ddd;
+  border-left: 10px solid #aaa;
+  margin: 1.5em 0;
+  padding: 1em 2em;
+  font-style: italic;
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote::before {
+  color: #aaa;
+  font-family: var(--font-headings);
+  font-style: normal;
+  content: "“";
+  font-size: 12rem;
+  line-height: 0.1rem;
+  margin-inline-end: 0.25em;
+  vertical-align: -0.5em;
+}
+
+blockquote::before {
+  content: "“";
+}
+
+blockquote p {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-1);
+}
+
+/*  ~~~ IMAGES ~~~  */
+/* This will set a basic display when an image is not available. */
+img {
+  color: var(--color-text-light);
+  background-color: #bcbcbc;
+  display: grid;
+  place-items: center;
+  object-fit: contain;
+  font-size: var(--font-size-1);
+}
+
+/*  ~~ PAGE LAYOUT ~~  */
+body {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  min-height: 100%;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  font-family: var(--font-sans);
+}
+
+/* HEADER Styles */
+header img {
+  font-family: "Alfa Slab One";
+  font-size: var(--font-size-3);
+}
+
+/* Navigation */
+nav ul,
+nav menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+header nav ul li,
+header nav menu li {
+  font-size: var(--font-size-2);
+}
+
+/* MAIN Styles */
+main {
+  width: 100%;
+}
+
+main:focus {
+  outline: none;
+  /* We remove focus styles from the <main> element because when someone activates the skip link, it programmatically focuses the <main> because it’s the :target. The focus ring is unnecessary though, because making the <main> focusable, programmatically, is purely for making tabbing on the keyboard more predictable for users who want to skip navigation. */
+}
+
+/* SECTIONS */
+/* section {
+  padding: 8em 0;
+} */
+/* For ::selection styles, see brand-colors.scss */
+/* ~~~ TABLES ~~~ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-block-end: 1rem;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+tr,
+td {
+  border: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Utility Classes ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~ */
+/* ~~~ SIZING ~~~ */
+/* ~~~~~~~~~~~~~~ */
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* ~~~~~~~~~~~~~~ */
+/* ~~~ LAYOUT ~~~ */
+/* ~~~~~~~~~~~~~~ */
+/* Wrapper */
+.wrapper {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.wrapper__lg-screens {
+  max-width: 100rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  /* We specifically add left/right padding/margin here so other compositional CSS can comfortably manage vertical space, if needed. 
+
+  padding-inline-start: 1.25rem;
+  padding-inline-end: 1.25rem;
+
+  */
+}
+
+/* Flow */
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 1em);
+  /* The flow utility provides flow and rhythm automatically between direct sibling elements. Where --flow-space is not defined: the default value is 1em, which equals the font size of the affected element. */
+}
+
+/* Structure */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description > .row {
+  display: block;
+}
+
+.col {
+  width: 100%;
+}
+
+.col + .col {
+  margin-inline-start: 2em;
+}
+
+/* Margin */
+.margin-block-start-0 {
+  margin-block-start: 0;
+}
+
+.margin-block-end-half {
+  margin-block-end: 0.5em;
+}
+
+.margin-inline-start--auto {
+  /* Pushes content to the right edge of container */
+  margin-inline-start: auto;
+}
+
+.margin-inline-end--auto {
+  /* Pushes content to the left edge of container */
+  margin-inline-end: auto;
+}
+
+/* Padding */
+.padding-block-end-sm {
+  padding-block-end: 1em;
+}
+
+.padding-block-end-md {
+  padding-block-end: 2em;
+}
+
+.padding-block-end-lg {
+  padding-block-end: 3em;
+}
+
+.padding-inline-start--auto {
+  /* Pushes content to the right edge of container */
+  padding-inline-start: auto;
+}
+
+.padding-inline-end--auto {
+  /* Pushes content to the left edge of container */
+  padding-inline-end: auto;
+}
+
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ~~~~~~~~~~~~~~~ */
+/* ~~~ FLEXBOX ~~~ */
+/* ~~~~~~~~~~~~~~~ */
+.flex {
+  display: flex;
+}
+
+/* Flex Options */
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--grow {
+  flex-grow: 1;
+}
+
+/* Flex Direction */
+.flex--row {
+  flex-direction: row;
+}
+
+.flex--row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--column-reverse {
+  flex-direction: column;
+}
+
+/* Flex Spacing */
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--space-around {
+  justify-content: space-around;
+}
+
+/* Flex Positioning */
+.flex--start-x {
+  justify-content: flex-start;
+}
+
+.flex--start-y {
+  align-items: flex-start;
+}
+
+.flex--center-x {
+  justify-content: center;
+}
+
+.flex--center-y {
+  align-items: center;
+}
+
+.flex--center-xy {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--end-x {
+  justify-content: flex-end;
+}
+
+.flex--end-y {
+  align-items: flex-end;
+}
+
+/* ~~~~~~~~~~~~ */
+/* ~~~ GRID ~~~ */
+/* ~~~~~~~~~~~~ */
+.grid {
+  display: grid;
+}
+
+.grid-item {
+  border: 2px solid var(--color-border);
+  padding: 2em;
+  text-wrap: balance;
+}
+
+.grid-item h3 {
+  font-family: var(--font-headings-narrow);
+}
+
+.grid-item h3,
+.grid-item p {
+  margin: 0 auto;
+}
+
+.grid-item p {
+  margin-block-start: 1em;
+}
+
+.item1 {
+  grid-area: item1;
+}
+
+.item2 {
+  grid-area: item2;
+}
+
+.item3 {
+  grid-area: item3;
+}
+
+.item4 {
+  grid-area: item4;
+}
+
+.item5 {
+  grid-area: item5;
+}
+
+.item6 {
+  grid-area: item6;
+}
+
+/* Grid Patterns */
+.grid--2x2 {
+  display: grid;
+  grid-template-areas: "item1 item2" "item3 item4";
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--2x3 {
+  display: grid;
+  grid-template-areas: "item1 item2 item3" "item4 item5 item6";
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Grid Columns */
+.grid--col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Grid Gap */
+.gap-xs {
+  gap: 0.5em;
+}
+
+.gap-sm {
+  gap: 1em;
+}
+
+.gap-md {
+  gap: 2em;
+}
+
+.gap-lg {
+  gap: 4em;
+}
+
+/* Grid Centering */
+.grid--center {
+  place-items: center;
+}
+
+/* ~~~~~~~~~~~~~ */
+/* ~~~ BLOCK ~~~ */
+/* ~~~~~~~~~~~~~ */
+/* Centering without Flex or Grid */
+.center-horizontal {
+  /* Center Horizontal-Only */
+  margin: 0 auto;
+}
+
+.center-vertical {
+  /* Center Vertical-Only */
+  display: block;
+  align-content: center;
+}
+
+/* Place Children */
+.place-end {
+  place-items: end;
+}
+
+/* Place Self */
+.self--start {
+  place-self: start;
+}
+
+.self--center {
+  place-self: center;
+}
+
+.self--end {
+  place-self: end;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ GAP [Flex or Grid] ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.gap-xxs {
+  gap: 0.5rem;
+}
+
+.gap-xs {
+  gap: 1rem;
+}
+
+.gap-sm {
+  gap: 2rem;
+}
+
+.gap-md {
+  gap: 4rem;
+}
+
+.gap-lg {
+  gap: 6rem;
+}
+
+.gap-xl {
+  gap: 8rem;
+}
+
+.gap-xxl {
+  gap: 10rem;
+}
+
+/* ~~~~~~~~~~~~~ */
+/* ~~~ FONTS ~~~ */
+/* ~~~~~~~~~~~~~ */
+/* ~~~ Font sizes based on root ~~~ */
+.font-xxs {
+  font-size: 0.5rem;
+}
+
+.font-xs {
+  font-size: 0.625rem;
+}
+
+.font-s {
+  font-size: 0.75rem;
+}
+
+.font-s-md {
+  font-size: 0.875rem;
+}
+
+.font-md {
+  font-size: 1rem;
+}
+
+.font-md-lg {
+  font-size: 1.25rem;
+}
+
+.font-lg {
+  font-size: 1.5rem;
+}
+
+.font-xl {
+  font-size: 2rem;
+}
+
+.font-xxl {
+  font-size: 3rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ IMAGE UTILITIES ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Transparency ~~~ */
+img.transparent {
+  background-color: transparent;
+  /* Use for PNG and SVG files. */
+}
+
+/* ~~~ Aspect Ratios ~~~ */
+.aspect-1x1 {
+  aspect-ratio: 1/1;
+}
+
+.aspect-3x2--portrait {
+  aspect-ratio: 2/3;
+}
+
+.aspect-3x2--landscape {
+  aspect-ratio: 3/2;
+}
+
+.aspect-5x3--portrait {
+  aspect-ratio: 3/5;
+}
+
+.aspect-5x3--landscape {
+  aspect-ratio: 5/3;
+}
+
+.aspect-16x9--portrait {
+  aspect-ratio: 9/16;
+}
+
+.aspect-16x9--landscape {
+  aspect-ratio: 16/9;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ ELEMENT STATUS ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* .active {
+  font-size: x-large;
+} */
+/* ~~~ ACCESSIBILITY CLASSES ~~~ */
+/* Skip Link */
+.skip-link {
+  display: inline-block;
+  padding: 1.25rem 1rem;
+  outline: 3px solid;
+  color: var(--ltdk-clr-txt);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.skip-link:hover {
+  background: var(--ltdk-clr-hlt);
+  color: var(--ltdk-clr-hlt-txt);
+  outline: none;
+}
+
+.skip-link:not(:focus) {
+  /* Visually hides the link when it is not focused. Screen readers can still "see" it. */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --measure: 60ch;
+}
+
+/* @link https://utopia.fyi/space/calculator?c=360,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  /* Space 3xs: 5px → 5px */
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  /* Space 2xs: 9px → 10px */
+  --space-2xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
+  /* Space xs: 14px → 15px */
+  --space-xs: clamp(0.875rem, 0.8494rem + 0.1136vw, 0.9375rem);
+  /* Space s: 18px → 20px */
+  --space-s: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  /* Space m: 27px → 30px */
+  --space-m: clamp(1.6875rem, 1.6108rem + 0.3409vw, 1.875rem);
+  /* Space l: 36px → 40px */
+  --space-l: clamp(2.25rem, 2.1477rem + 0.4545vw, 2.5rem);
+  /* Space xl: 54px → 60px */
+  --space-xl: clamp(3.375rem, 3.2216rem + 0.6818vw, 3.75rem);
+  /* Space 2xl: 72px → 80px */
+  --space-2xl: clamp(4.5rem, 4.2955rem + 0.9091vw, 5rem);
+  /* Space 3xl: 108px → 120px */
+  --space-3xl: clamp(6.75rem, 6.4432rem + 1.3636vw, 7.5rem);
+  /* One-up pairs */
+  /* Space 3xs-2xs: 5px → 10px */
+  --space-3xs-2xs: clamp(0.3125rem, 0.1847rem + 0.5682vw, 0.625rem);
+  /* Space 2xs-xs: 9px → 15px */
+  --space-2xs-xs: clamp(0.5625rem, 0.4091rem + 0.6818vw, 0.9375rem);
+  /* Space xs-s: 14px → 20px */
+  --space-xs-s: clamp(0.875rem, 0.7216rem + 0.6818vw, 1.25rem);
+  /* Space s-m: 18px → 30px */
+  --space-s-m: clamp(1.125rem, 0.8182rem + 1.3636vw, 1.875rem);
+  /* Space m-l: 27px → 40px */
+  --space-m-l: clamp(1.6875rem, 1.3551rem + 1.4773vw, 2.5rem);
+  /* Space l-xl: 36px → 60px */
+  --space-l-xl: clamp(2.25rem, 1.6364rem + 2.7273vw, 3.75rem);
+  /* Space xl-2xl: 54px → 80px */
+  --space-xl-2xl: clamp(3.375rem, 2.7102rem + 2.9545vw, 5rem);
+  /* Space 2xl-3xl: 72px → 120px */
+  --space-2xl-3xl: clamp(4.5rem, 3.2727rem + 5.4545vw, 7.5rem);
+  /* Custom pairs */
+  /* Space s-l: 18px → 40px */
+  --space-s-l: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
+  /* Flow Space */
+  --flow-space: var(--space-xs-s);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+/* RECURSION */
+.stack__recursive * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+/* EXCEPTIONS */
+.stack__space-2,
+.stack__space-2 + * {
+  --space: 3rem;
+}
+
+.stack__space-3,
+.stack__space-3 + * {
+  --space: 3rem;
+}
+
+/* SPLIT STACK */
+/* 
+
+.stack__split-1 > :nth-child(2) {
+  margin-block-end: auto;
+}
+
+.stack__split-2 > :nth-child(2) {
+  margin-block-end: auto;
+}
+
+etc...
+
+*/
+/* 
+
+.stack:only-child {
+  // ↓ `height` in horizontal-tb writing mode
+  block-size: 100%;
+}
+
+*/
+.box {
+  /* --border-thin: 0.125rem; */
+  padding: var(--s1);
+  border: var(--border-thin) solid;
+  /* outline-offset: calc(var(--border-thin) * -1); */
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+}
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  /* ↓ Dark becomes light, and light becomes dark */
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-dark);
+}
+
+/*  ~~~ CONTAINERS ~~~  */
+.container {
+  width: 90%;
+  max-width: 1600px;
+}
+
+.container--site-header {
+  margin: 0 auto;
+}
+
+.container--main {
+  margin: 4rem auto 0;
+  gap: 2rem;
+}
+
+.container--site-footer {
+  display: flex;
+  margin: 1em auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+.body__foreground {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.flex-columns {
+  --min: 45ch;
+  --gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.flex-columns > * {
+  flex: 1 1 var(--min);
+}
+
+.grid-columns {
+  --min: 45ch;
+  --gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  gap: var(--gap);
+}
+
+.grid-columns > * {
+  list-style: none;
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+/* Burger Menu Styles */
+.burger-menu__trigger {
+  display: none;
+  /*
+  If the component is disabled—which is our default state—we don’t want to present a trigger. Hiding it with display: none will hide it from screen readers, too.
+  */
+}
+
+.burger-menu__bar,
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: light-dark(var(--color-text-light), var(--color-text-dark));
+  position: absolute;
+  left: 50%;
+  margin-inline-start: -12px;
+  /*
+  Style the innerHTML bars.
+  */
+}
+
+.burger-menu__bar {
+  top: 50%;
+  transition: background 10ms 300ms ease;
+  transform: translateY(-50%);
+  /*
+  Position the .burger-menu__bar dead-center with absolute positioning, which allows us to comfortably animate it, knowing it won’t affect layout.
+  */
+}
+
+/* Render the pseudo-elements and push one up and one down. */
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  content: "";
+}
+
+.burger-menu__bar::before {
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  top: -8px;
+}
+
+.burger-menu__bar::after {
+  transition: bottom 300ms 350ms ease, transform 300ms 50ms ease;
+  bottom: -8px;
+}
+
+/* ~~~ CSS Exceptions ~~~ */
+/* Handle styling of the menu when it is enabled */
+.burger-menu[enabled=true] .burger-menu__trigger {
+  display: block;
+  position: relative;
+  z-index: 999;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu[enabled=true] .burger-menu__panel {
+  /* Hide panel visibility when menu is closed to allow user interaction with other page elements "below" the panel. */
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* We increase the z-index to ensure the modal menu covers all other content except the window border. */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 2rem;
+  /* Set the vertical overflow to auto so long menus can be scrolled. */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Handle the logo styling */
+#logo__burger-menu {
+  max-width: 400px;
+  margin-block-end: 3rem;
+}
+
+.burger-menu[enabled=true] #logo__burger-menu {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.burger-menu[enabled=true][status=open] #logo__burger-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.burger-menu[enabled=true][status=closed] #logo__burger-menu {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Convert the navigation into a stacked menu when the burger menu is enabled. */
+.burger-menu[enabled=true] .nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger-menu[enabled=true] .nav li {
+  font-size: 1.5rem;
+}
+
+/* Hide the navigation list items until the burger menu is open. */
+.burger-menu[enabled=true][status=closed] .nav li {
+  opacity: 0;
+}
+
+.burger-menu[enabled=true][status=open] .nav li {
+  opacity: 1;
+}
+
+/* Interactive States */
+/* The panel’s visibility can only be changed if the burger menu is enabled and the status is open. */
+.burger-menu[enabled=true][status=open] .burger-menu__panel {
+  visibility: visible;
+  transition: opacity 400ms ease;
+  opacity: 1;
+  /*
+  When the panel is “open”, we transition the opacity to 1 and set visibility to visible to show it.
+  */
+}
+
+.burger-menu[enabled=true][status=closed] .burger-menu__panel {
+  transition: opacity 400ms ease;
+  /*
+  In the “closed” state, we transition the navigation panel to its default opacity (i.e. 0).
+  */
+}
+
+.burger-menu[enabled=true][status=closed] .burger-menu__panel > * {
+  transition: opacity 400ms ease;
+  opacity: 0;
+  /*
+  In the “closed” state, we visually hide the navigation items with opacity.
+  */
+}
+
+.burger-menu[enabled=true][status=open] .burger-menu__panel > * {
+  transition: transform 500ms cubic-bezier(0.17, 0.67, 0, 0.87) 400ms, opacity 500ms ease 400ms;
+  transform: translateY(0);
+  opacity: 1;
+  /*
+  When the panel is in the “open” state, we transition them back to being visible with full opacity.
+  */
+}
+
+/* 
+BURGER MENU BAR ANIMATION
+
+Convert burger bars into a 'close' icon when the menu is open. 
+
+Sets the background and border of the main (central) bar to be transparent, and rotates the pseudo-elements in opposite directions to create a cross.
+*/
+.burger-menu[enabled=true][status=open] .burger-menu__bar::before {
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu[enabled=true][status=open] .burger-menu__bar::after {
+  transition: bottom 300ms 50ms ease, transform 300ms 350ms ease;
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu[enabled=true][status=open] .burger-menu__bar {
+  background: transparent;
+}
+
+/* HEADER Styles */
+.site-header {
+  padding: 2em 0;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  box-shadow: 0 8px 32px RGBA(0, 0, 0, 0.25);
+}
+
+.site-header :focus {
+  outline-color: var(--color-dark);
+}
+
+.site-header a {
+  text-decoration: none;
+}
+
+.site-header .nav__list-item a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-title {
+  color: var(--ltdk-clr-txt);
+}
+
+.logo {
+  color: light-dark(var(--color-text-light), var(--color-text-dark));
+  font-weight: bold;
+  font-size: var(--font-size-4);
+  text-align: center;
+  object-fit: contain;
+}
+
+#logo-home {
+  width: 100%;
+  max-width: 1000px;
+  margin-block-end: 2rem;
+  font-size: var(--font-size-6);
+}
+@media (prefers-color-scheme: dark) {
+  #logo-home {
+    filter: drop-shadow(0.25rem 0.25rem 1rem light-dark(rgba(64, 64, 64, 0.5), rgba(0, 0, 0, 0.5)));
+  }
+}
+
+#logo-site-header {
+  max-width: 8rem;
+  font-size: var(--font-size-4);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar a {
+    width: 100%;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Footer Template ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* FOOTER Styles */
+footer {
+  width: 100%;
+  margin-top: auto;
+  margin-block-start: 4rem;
+  padding: 1.5em 2em;
+  padding: 2em 0;
+  border-top: 8px solid var(--ltdk-clr-txt);
+  font-size: var(--font-size-0);
+  color: var(--ltdk-clr-txt);
+}
+
+footer :is(h1, h2, h3, h4, h5, h6, p, a, ul, ol, li) {
+  font-family: var(--font-headings);
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: light-dark(var(--color-text-light), var(--color-brand-secondary));
+}
+
+.footer--contact {
+  width: 30%;
+  max-width: 500px;
+}
+
+.footer--nav {
+  max-width: 30rem;
+  display: flex;
+}
+
+.footer--nav > ul {
+  width: 600px;
+  flex-wrap: wrap;
+}
+
+/* EXISTING STYLES BEGIN HERE */
+footer ul {
+  margin-block-end: 0;
+}
+
+/* ~~~ Footer Masthead ~~~ */
+.masthead {
+  place-items: end;
+}
+
+.logo-container {
+  max-width: 100%;
+  max-height: 100%;
+  place-items: end;
+}
+
+#site-logo__footer {
+  width: 300px;
+}
+
+footer address,
+.contact-info {
+  font-family: var(--font-headings);
+  font-style: normal;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.contact-info span {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Card Module Style Template ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TODO: Need to make vertical layout card width narrow proportionately to screen width. */
+/* 
+
+section.container--img-card {
+  margin: 4em 2em;
+} 
+
+*/
+section.img-card {
+  height: auto;
+  padding: 3em;
+  background-color: #efefef;
+  border-radius: 1em;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-card .flex-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.img-card--row .flex-container {
+  flex-direction: row;
+}
+
+.img-card--row h3,
+.img-card--row p {
+  text-align: right;
+}
+
+.img-card--row-reverse h3,
+.img-card--row-reverse p {
+  text-align: left;
+}
+
+.img-card--row-reverse .flex-container {
+  flex-direction: row-reverse;
+}
+
+.flex-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.flex-column {
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-card h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.img-card p {
+  margin-block-end: 0;
+}
+
+.img-card hr {
+  border: 1px solid black;
+}
+
+.img-card img {
+  background-color: #bcbcbc;
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 300px;
+  object-fit: contain;
+  border: 2px solid black;
+}
+
+.img-card--inner {
+  gap: 2em;
+}
+
+.img-card .txt-wrapper {
+  width: 30ch;
+}
+
+.img-card .img-wrapper {
+  flex: 0 0 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .img-card--row .flex-container {
+    flex-direction: column;
+  }
+  .img-card--row-reverse .flex-container {
+    flex-direction: column-reverse;
+  }
+  .img-card h3,
+  .img-card p {
+    text-align: left;
+  }
+  .img-card--inner {
+    gap: 2em;
+  }
+  .txt-wrapper {
+    width: 400px;
+  }
+  .img-wrapper {
+    flex-basis: 300px;
+  }
+}
+/*  ~~~~~~~~~~~~~  *\
+    ~~~ Fonts ~~~
+\*  ~~~~~~~~~~~~~  */
+/* Project-specific fonts and text styles */
+:root {
+  /* ~~~~~~~~~~~~~~~~~~~ *\
+      Font Sizes in REM 
+  \* ~~~~~~~~~~~~~~~~~~~ */
+  --font-size-xs: 0.65rem;
+  --font-size-sm: 0.8rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  /* ~~~~~~~~~~~~~~~~~~~~~ *\
+      Font Sizes in CLAMP 
+  \* ~~~~~~~~~~~~~~~~~~~~~ */
+  --font-size--2: clamp(0.6944rem, 0.6866rem + 0.0417vw, 0.72rem);
+  --font-size--1: clamp(0.8333rem, 0.8129rem + 0.1088vw, 0.9rem);
+  --font-size-0: clamp(1rem, 0.9617rem + 0.2041vw, 1.125rem);
+  --font-size-1: clamp(1.2rem, 1.1369rem + 0.3367vw, 1.4063rem);
+  --font-size-2: clamp(1.44rem, 1.3427rem + 0.5189vw, 1.7578rem);
+  --font-size-3: clamp(1.728rem, 1.5843rem + 0.7661vw, 2.1973rem);
+  --font-size-4: clamp(2.0736rem, 1.8676rem + 1.0987vw, 2.7466rem);
+  --font-size-5: clamp(2.4883rem, 2.1991rem + 1.5427vw, 3.4332rem);
+  --font-size-6: clamp(2.986rem, 2.5863rem + 2.1315vw, 4.2915rem);
+  /* ~~~~~~~~~~~~~ *\
+      Font Stacks 
+  \* ~~~~~~~~~~~~~ */
+  --font-sans: "Work Sans", "Roboto", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-code: "Source Code Pro", "Space Mono" Menlo, Consolas, "DejaVu Sans Mono", ui-monospace, monospace;
+  --font-serif: "Source Serif 4", "Times New Roman", serif;
+  --font-transitional: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --font-headings: "Space Grotesk", "Recursive", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  --font-headings-alt: "Tomorrow";
+  --font-headings-narrow: "Recursive", "Archivo Narrow", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-system-ui: system-ui, sans-serif;
+}
+
+/*  ~~~~~~~~~~~~~
+    ~~~ Color ~~~
+    ~~~~~~~~~~~~~  */
+:root {
+  color-scheme: dark light;
+  --color-brand-darkblue: #293558;
+  --color-brand-primary: #293558;
+  --color-brand-dark: #293558;
+  --color-brand-bg-dark: #293558;
+  --color-brand-paleblue: #566db0;
+  --color-brand-primary-shade: #566db0;
+  --color-brand-secondary: #566db0;
+  --color-brand-yellow: #ffce32;
+  --color-brand-accent: #ffce32;
+  --color-brand-tertiary: #ffce32;
+  --color-brand-darkgray: #4f4f4f;
+  --color-brand-darkgrey: #4f4f4f;
+  --color-brand-lightgray: #d4d7de;
+  --color-brand-lightgrey: #d4d7de;
+  --color-brand-text: #d4d7de;
+  --color-brand-light: #d4d7de;
+  --color-brand-white: #f9f9f9;
+  --color-brand-bg-light: #f9f9f9;
+  --color-brand-accent: #f9f9f9;
+  --clr-brand-darkblue: #293558;
+  --clr-brand-primary: #293558;
+  --clr-brand-dark: #293558;
+  --clr-brand-bg-dark: #293558;
+  --clr-brand-paleblue: #566db0;
+  --clr-brand-primary-shade: #566db0;
+  --clr-brand-secondary: #566db0;
+  --clr-txt-visited: #566db0;
+  --clr-brand-yellow: #ffce32;
+  --clr-brand-accent: #ffce32;
+  --clr-brand-tertiary: #ffce32;
+  --clr-brand-darkgray: #4f4f4f;
+  --clr-brand-darkgrey: #4f4f4f;
+  --clr-brand-lightgray: #d4d7de;
+  --clr-brand-lightgrey: #d4d7de;
+  --clr-brand-text: #d4d7de;
+  --clr-brand-light: #d4d7de;
+  --clr-brand-white: #f9f9f9;
+  --clr-brand-bg-light: #f9f9f9;
+}
+
+:root {
+  --color-bg-light: #d4d7de;
+  --color-bg-gradient-light: radial-gradient(#566db0 30%, #293558);
+  --color-bg-border-light: #3e5085;
+  --color-border-light: #293558;
+  --color-highlight-light: #293558;
+  --color-text-light: #293558;
+  --color-bg-dark: #293558;
+  --color-bg-gradient-dark: radial-gradient(#293558 30%, #566db0);
+  --color-bg-border-dark: #d4d7de;
+  --color-border-dark: #d4d7de;
+  --color-highlight-dark: #ffce32;
+  --color-text-dark: #d4d7de;
+  --ltmode-clr-bkg: #d4d7de;
+  --ltmode-clr-bkg-grd: radial-gradient(#566db0 30%, #293558);
+  --ltmode-clr-bkg-bdr: #3e5085;
+  --ltmode-clr-bdr: #293558;
+  --ltmode-clr-hlt: #566db0;
+  --ltmode-clr-hlt-txt: #d4d7de;
+  --ltmode-clr-txt: #293558;
+  --dkmode-clr-bkg-: #293558;
+  --dkmode-clr-bkg-grd: radial-gradient(#293558 30%, #566db0);
+  --dkmode-clr-bkg-bdr: #d4d7de;
+  --dkmode-clr-bdr: #d4d7de;
+  --dkmode-clr-hlt: #ffce32;
+  --dkmode-clr-hlt-txt: #293558;
+  --dkmode-clr-txt: #d4d7de;
+  --ltdk-clr-bkg: light-dark(#d4d7de, #293558);
+  --ltdk-clr-bkg-bdr: light-dark(#3e5085, #d4d7de);
+  --ltdk-clr-txt: light-dark(#293558, #d4d7de);
+  --ltdk-clr-hlt: light-dark(#293558, #d4d7de);
+  --ltdk-clr-hlt-txt: light-dark(#566db0, #ffce32);
+  --ltdk-clr-hlt-txt-visited: #566db0;
+  --dklt-clr-bkg: light-dark(#293558, #d4d7de);
+}
+
+/* <mark> with .highlight class */
+mark.highlight {
+  color: var(--ltdk-clr-hlt);
+  background-color: var(--ltdk-clr-hlt-txt);
+  font-style: normal;
+}
+
+/* SELECTION */
+::selection {
+  color: var(--clr-brand-dark);
+  background-color: var(--clr-brand-accent);
+}
+
+body {
+  background-image: light-dark(var(--color-bg-gradient-light), var(--color-bg-gradient-dark));
+}
+
+.background-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100%;
+  border: 8px solid light-dark(var(--color-border-light), var(--color-border-dark));
+  pointer-events: none;
+}
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  pointer-events: none;
+}
+
+h1 {
+  color: light-dark(var(--ltmode-clr-txt), #d4d7de);
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+legend {
+  width: 100%;
+  text-align: center;
+}
+
+input[type=radio] {
+  appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+label {
+  border: 2px solid light-dark(#293558, #d4d7de);
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  aspect-ratio: 1/1;
+  width: 80px;
+}
+
+label:hover {
+  color: light-dark(var(--color-text-dark), var(--color-text-light));
+  background-color: light-dark(#293558, #d4d7de);
+}
+
+label .icon {
+  font-size: 1.5rem;
+}
+
+label .label-text {
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+input[type=radio]:checked + label {
+  border: 4px solid light-dark(#293558, #d4d7de);
+}
+
+/* Light and Dark Mode Preferences */
+@media (prefers-color-scheme: light) {
+  .background-gradient {
+    background-image: var(--color-bg-gradient-light);
+    mix-blend-mode: hard-light; /* Not functional at this time */
+    opacity: 0.5;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .background-gradient {
+    background-image: var(--color-bg-gradient-dark);
+    mix-blend-mode: difference; /* Not functional at this time */
+    opacity: 0.25;
+  }
+}
+/* ~~~ ANIMATIONS ~~~ */
+a {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~ *\ 
+    Generic Page Styles
+\* ~~~~~~~~~~~~~~~~~~~~~ */
+.page__header {
+  margin-bottom: 4rem;
+  margin-block-end: 4rem;
+}
+
+.page__excerpt {
+  font-family: var(--font-headings-narrow);
+  font-weight: 350;
+  font-size: var(--font-size-3);
+  text-wrap: balance;
+}
+
+/*\ ~~~ Sections ~~~ \*/
+.page__section {
+  padding-top: 1rem;
+  padding-block-start: 1rem;
+  border-top: 5px solid var(--ltdk-clr-txt);
+}
+
+.section__prelude {
+  font-family: var(--font-headings-narrow);
+  font-weight: 350;
+  font-size: var(--font-size-2);
+}
+
+.page__section:first-of-type {
+  margin-bottom: 3rem;
+  margin-block-end: 3rem;
+}
+
+.page__section + .page__section {
+  margin-top: 3rem;
+  margin-block-start: 3rem;
+}
+
+.page__section:not(:last-child) {
+  padding-bottom: 3rem;
+  padding-block-end: 3rem;
+}
+
+.page__section--inner {
+  margin-top: 5rem;
+  margin-block-start: 5rem;
+}
+
+.page__section--inner h4 {
+  padding-bottom: 1rem;
+  padding-block-end: 1rem;
+  border-bottom: 3px solid var(--ltdk-clr-txt);
+  font-weight: 450;
+}
+
+/* ~~~~~~~~~~~ *\
+    Home Page
+\* ~~~~~~~~~~~ */
+/* Header */
+#home-header {
+  height: 100vh;
+  width: 100%;
+  padding: 0 4em;
+}
+
+/* Content-specific Sections */
+.homepage-section__hero {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+/* ~~~~~~~~~~~~ *\ 
+    About Page
+\* ~~~~~~~~~~~~ */
+.about-lists {
+  list-style: none;
+  text-wrap: balance;
+  margin-top: 1rem;
+  margin-block-start: 1rem;
+}
+
+.about-lists h3 {
+  margin-top: 0;
+  margin-block-start: 0;
+}
+
+/* ~~~~~~~~~~~~ *\ 
+    News Page
+\* ~~~~~~~~~~~~ */
+.post-list {
+  --min: 45ch;
+  --gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  gap: var(--gap);
+}
+
+.post-list__item {
+  list-style: none;
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+/* ~~~~~~~~~~~~~~~ *\ 
+    Projects Page
+\* ~~~~~~~~~~~~~~~ */
+/* PROJECTS */
+.project-list {
+  --min: 45ch;
+  --gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  gap: var(--gap);
+  margin-block-start: 2rem;
+  list-style: none;
+}
+
+.project-list__item {
+  list-style: none;
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+.project-title {
+  font-size: var(--font-size-2);
+  margin: 0.5em 0 0;
+}
+
+.project-excerpt {
+  margin-top: 0.25rem;
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+.featured-projects .project-list {
+  --gap: 3em;
+}
+
+/* ~~~~~~~~~~~~ *\ 
+    Staff Page
+\* ~~~~~~~~~~~~ */
+.staff-list {
+  --min: 45ch;
+  --gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  gap: var(--gap);
+}
+
+.staff-list__item {
+  list-style: none;
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+.staff-credentials {
+  font-size: 0.75em;
+}
+
+/* <button> Element Reset */
+/* TODO: Complete <button> element module styles. */
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+/*  ~~~~~~~~~~~~~~~~~~
+    ~~~ Navigation ~~~ 
+    ~~~~~~~~~~~~~~~~~~  */
+.navbar a {
+  align-self: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+}
+
+.nav--primary {
+  box-sizing: border-box;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.nav--primary .nav__list-item {
+  flex: 0 1 auto;
+  width: 14ch;
+  margin-bottom: 0;
+  margin-block-end: 0;
+  border: 4px solid light-dark(var(--color-border-light), var(--color-border-dark));
+  background-color: transparent;
+  color: light-dark(var(--color-text-light), var(--color-text-dark));
+  font-family: var(--font-headings);
+}
+
+.nav--primary .active {
+  background-color: light-dark(var(--color-bg-dark), var(--color-bg-light));
+  border-color: light-dark(var(--color-border-dark), var(--color-border-light));
+  color: light-dark(var(--color-text-dark), var(--color-text-light));
+}
+
+/* Change color on hover */
+.nav--primary .nav__list-item:hover {
+  background-color: light-dark(var(--color-bg-dark), var(--color-bg-light));
+}
+
+.nav--primary .nav__list-item a:hover {
+  color: light-dark(var(--color-text-dark), var(--color-text-light));
+}
+
+.post-description p {
+  color: var(--color-text-light);
+}
+
+.post-meta {
+  margin-block-start: 0.5em;
+  font-size: var(--font-size-1);
+}
+
+.post__tags {
+  font-size: var(--font-size-0);
+}
+
+.post__tags a {
+  font-weight: 600;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.post-list__item {
+  margin-block-end: 0;
+  color: var(--color-brand-darkblue);
+  background-color: hsl(from var(--dklt-clr-bkg) 0 0 65);
+  border-left: 10px solid var(--color-brand-lightgrey);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.post-content {
+  flex: 1 1;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-img {
+  flex: 0 1;
+  aspect-ratio: 16/9;
+}
+
+.post-img img {
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 1rem;
+}
+
+.post-link {
+  color: inherit;
+}
+
+div.post-author {
+  font-size: var(--font-size-1);
+  margin-bottom: 0;
+}
+
+.post-author a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.post-excerpt {
+  margin: 0.5em 0;
+  max-width: 60ch;
+}
+
+.post-date {
+  font-size: var(--font-size-sm);
+  color: #4f4f4f;
+}
+
+/* TAGS */
+.post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-block-start: 1rem;
+}
+
+.tag__link {
+  display: inline-block;
+  background-color: light-dark(var(--color-text-light), var(--color-text-dark));
+  color: light-dark(var(--color-text-dark), var(--color-text-light));
+  padding: 0.2em 0.5em;
+  margin: 0.2em 0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  margin-block-start: 0;
+}
+
+#search-input {
+  padding: 1em;
+  font-size: var(--font-size-0);
+  border: 2px solid light-dark(var(--color-text-light), var(--color-text-dark));
+  border-radius: 5px;
+  margin-block-end: 1em;
+}
+
+/* FEATURED IMAGE */
+.featured-img {
+  flex: 1 1 auto;
+}
+
+.featured-img--news {
+  width: 100%;
+  flex: 0 0 400px;
+  margin-bottom: var(--space-s-l);
+}
+
+.featured-img--staff {
+  flex: 0 0 300px;
+  margin-bottom: var(--space-s-l);
+}
+
+.featured-img--project {
+  flex: 0 0 600px;
+  margin-bottom: var(--space-s-l);
+}
+
+.project-list__item--featured .project-title {
+  margin-block-end: 0.25em;
+}
+
+.project-list__item--featured .project-excerpt {
+  margin-block-end: 0;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-img {
+  border: solid 2px light-dark(var(--color-bg-border-light), var(--color-bg-border-dark));
+  color: var(--color-text-light);
+  font-size: var(--font-size-1);
+}
+
+.slider-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-block-start: 0.75rem;
+  margin-block-end: 0.5em;
+  height: 3rem;
+  justify-content: space-between;
+}
+
+.slider-btn {
+  border: solid 2px light-dark(var(--color-bg-border-light), var(--color-bg-border-dark));
+  color: var(--ltdk-clr-txt);
+  background-color: light-dark(var(--color-bg-light), var(--color-bg-dark));
+  font-size: var(--font-size-1);
+}
+
+/* @use "media-queries"; */
+/* ~~~ DEBUG STYLES ~~~ */
+.debug-fill {
+  background-color: 1px solid salmon;
+}
+
+.debug-border {
+  border: 1px solid salmon;
+}
+
+/*# sourceMappingURL=main.css.map */
