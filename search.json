@@ -4,7 +4,7 @@
       "title"    : "Introducing Our New Logo",
       "category" : "",
       "tags"     : "update, company",
-      "url"      : "/news/baumwelt-rebrand/",
+      "url"      : "baumwelt-staging/news/baumwelt-rebrand/",
       "date"     : "07 Jul 2025",
       "excerpt"  : "We are excited to unveil our new logo capturing the spirit and vision of our practice."
     } ,
@@ -13,7 +13,7 @@
       "title"    : "Penmet Minigolf",
       "category" : "",
       "tags"     : "project, update",
-      "url"      : "/news/penmet-minigolf/",
+      "url"      : "baumwelt-staging/news/penmet-minigolf/",
       "date"     : "01 May 2025",
       "excerpt"  : "First shipment arrives at PenMet Parks Minigolf Course."
     } ,
@@ -22,7 +22,7 @@
       "title"    : "Spring Update",
       "category" : "",
       "tags"     : "update, project",
-      "url"      : "/news/spring-update/",
+      "url"      : "baumwelt-staging/news/spring-update/",
       "date"     : "01 Apr 2025",
       "excerpt"  : "Spring Update from the Field"
     } ,
@@ -31,7 +31,7 @@
       "title"    : "Banana",
       "category" : "fruit",
       "tags"     : "fruit, plants",
-      "url"      : "/news/fruit/banana/",
+      "url"      : "baumwelt-staging/news/fruit/banana/",
       "date"     : "22 Dec 2018",
       "excerpt"  : "A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa."
     } ,
@@ -40,7 +40,7 @@
       "title"    : "Kiwi",
       "category" : "fruit",
       "tags"     : "fruit, plants",
-      "url"      : "/news/fruit/kiwi/",
+      "url"      : "baumwelt-staging/news/fruit/kiwi/",
       "date"     : "08 Oct 2018",
       "excerpt"  : "Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia."
     } ,
@@ -49,7 +49,7 @@
       "title"    : "Apple",
       "category" : "fruit",
       "tags"     : "fruit, plants",
-      "url"      : "/news/fruit/apple/",
+      "url"      : "baumwelt-staging/news/fruit/apple/",
       "date"     : "08 Oct 2018",
       "excerpt"  : "An apple is a sweet, edible fruit produced by an apple tree."
     } 
