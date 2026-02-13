@@ -2111,6 +2111,7 @@ button {
   margin: 0;
   padding: 0;
   gap: 1rem;
+  justify-content: center;
 }
 
 .nav--primary .nav__list-item {
