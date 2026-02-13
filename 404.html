@@ -192,11 +192,15 @@
   <header class="page__header">
   <h1>
     Page Not Found 
+    
   </h1>
+
   
 
   <div class="page__excerpt">
-      
+     
+    
+    
   </div>
 </header>
 
@@ -210,38 +214,40 @@
 
 <ul>
   <li id="back-link"></li>
-  <li><a href="/baumwelt-staging/projects">Browse our projects</a></li>
   <li><a href="/baumwelt-staging/">Return home</a></li>
+  <li><a href="/baumwelt-staging/projects">Browse our projects</a></li>
   <li>Search the news archives: <!-- HTML search field -->
-<search id="search-container">
+<search id="search-container" class="search-container">
   <!-- Optionally you can add the 'autofocus' keyword within the input declaration to send the user directly to the search field on page load. -->
   <input
     type="search"
     id="search-input"
+    class="search-input"
     name="search-input"
     placeholder="Type your search here..."
   />
 
 <!-- HTML search field results -->
-  <ul id="results-container"></ul>
+  <ul id="search-results" class="search-results post-list"></ul>
 </search>
 
 <!-- Grab search-script.js -->
 
 <!-- Local source -->
-<script src="/assets/js/search-script.js" type="text/javascript"></script>
+<script src="/baumwelt-staging/assets/js/search-script.js" type="text/javascript"></script>
 
 <!-- Remote source -->
 <!-- <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
  -->
+
 <!-- Configuration -->
 <script>
-  SimpleJekyllSearch({
+  SimpleJekyllSearch ({
     searchInput: document.getElementById("search-input"),
-    resultsContainer: document.getElementById("results-container"),
-    json: "/search.json",
+    resultsContainer: document.getElementById("search-results"),
+    json: "/baumwelt-staging/search.json",
     searchResultTemplate:
-      '<li><a href="{url}">{title}</a><br><span class="post-meta">{date}</span><br><span class="post-excerpt">{excerpt}</span></li>'
+      '<li class="post-list__item"><div class="post-content"><h3 class="post-title"><a href="{url}">{title}</a></h3><div class="post-meta"><div class="post-date">{date}</div></div><p class="post-excerpt">{excerpt}</p></div></li>'
   });
 </script>
 </li>
