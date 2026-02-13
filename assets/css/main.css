@@ -604,24 +604,6 @@ td {
   /* The flow utility provides flow and rhythm automatically between direct sibling elements. Where --flow-space is not defined: the default value is 1em, which equals the font size of the affected element. */
 }
 
-/* Structure */
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.description > .row {
-  display: block;
-}
-
-.col {
-  width: 100%;
-}
-
-.col + .col {
-  margin-inline-start: 2em;
-}
-
 /* Margin */
 .margin-block-start-0 {
   margin-block-start: 0;
@@ -685,72 +667,72 @@ td {
 }
 
 /* Flex Options */
-.flex--wrap {
+.flex-wrap {
   flex-wrap: wrap;
 }
 
-.flex--grow {
+.flex-grow {
   flex-grow: 1;
 }
 
 /* Flex Direction */
-.flex--row {
+.flex-row {
   flex-direction: row;
 }
 
-.flex--row-reverse {
+.flex-row-reverse {
   flex-direction: row-reverse;
 }
 
-.flex--column {
+.flex-column {
   flex-direction: column;
 }
 
-.flex--column-reverse {
+.flex-column-reverse {
   flex-direction: column;
 }
 
 /* Flex Spacing */
-.flex--space-between {
+.flex-space-between {
   justify-content: space-between;
 }
 
-.flex--space-around {
+.flex-space-around {
   justify-content: space-around;
 }
 
 /* Flex Positioning */
-.flex--start-x {
+.flex-start-x {
   justify-content: flex-start;
 }
 
-.flex--start-y {
+.flex-start-y {
   align-items: flex-start;
 }
 
-.flex--center-x {
+.flex-center-x {
   justify-content: center;
 }
 
-.flex--center-y {
+.flex-center-y {
   align-items: center;
 }
 
-.flex--center-xy {
-  justify-content: center;
-  align-items: center;
-}
-
-.flex--center {
+.flex-center-xy {
   justify-content: center;
   align-items: center;
 }
 
-.flex--end-x {
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end-x {
   justify-content: flex-end;
 }
 
-.flex--end-y {
+.flex-end-y {
   align-items: flex-end;
 }
 
@@ -969,7 +951,7 @@ td {
 /* ~~~ IMAGE UTILITIES ~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~ Transparency ~~~ */
-img.transparent {
+.transparent {
   background-color: transparent;
   /* Use for PNG and SVG files. */
 }
@@ -1009,6 +991,10 @@ img.transparent {
 /* .active {
   font-size: x-large;
 } */
+.scroll-snap-y {
+  scroll-snap-type: y mandatory;
+}
+
 /* ~~~ ACCESSIBILITY CLASSES ~~~ */
 /* Skip Link */
 .skip-link {
@@ -1194,7 +1180,7 @@ etc...
   margin: 1em auto;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
@@ -1295,6 +1281,7 @@ html, body {
   /* Hide panel visibility when menu is closed to allow user interaction with other page elements "below" the panel. */
   visibility: hidden;
   opacity: 0;
+  background-color: var(--ltdk-clr-bkg-bdr);
   position: fixed;
   top: 0;
   left: 0;
@@ -1309,6 +1296,18 @@ html, body {
   /* Set the vertical overflow to auto so long menus can be scrolled. */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+.burger-menu[enabled=true] .burger-menu__panel .nav--primary .nav__list-item {
+  border: 4px solid var(--ltdk-clr-bkg);
+  color: var(--ltdk-clr-bkg);
+}
+.burger-menu[enabled=true] .burger-menu__panel .nav--primary .nav__list-item .active {
+  background-color: var(--ltdk-clr-bkg);
+  color: var(--ltdk-clr-bkg-bdr);
+}
+.burger-menu[enabled=true] .burger-menu__panel .nav--primary .nav__list-item :hover {
+  background-color: var(--ltdk-clr-bkg);
+  color: var(--ltdk-clr-bkg-bdr);
 }
 
 /* Handle the logo styling */
@@ -1355,36 +1354,28 @@ html, body {
 /* Interactive States */
 /* The panel’s visibility can only be changed if the burger menu is enabled and the status is open. */
 .burger-menu[enabled=true][status=open] .burger-menu__panel {
+  /* When the panel is “open”, we transition the opacity to 1 and set visibility to visible to show it. */
   visibility: visible;
   transition: opacity 400ms ease;
   opacity: 1;
-  /*
-  When the panel is “open”, we transition the opacity to 1 and set visibility to visible to show it.
-  */
 }
 
 .burger-menu[enabled=true][status=closed] .burger-menu__panel {
   transition: opacity 400ms ease;
-  /*
-  In the “closed” state, we transition the navigation panel to its default opacity (i.e. 0).
-  */
+  /* In the “closed” state, we transition the navigation panel to its default opacity (i.e. 0). */
 }
 
 .burger-menu[enabled=true][status=closed] .burger-menu__panel > * {
   transition: opacity 400ms ease;
   opacity: 0;
-  /*
-  In the “closed” state, we visually hide the navigation items with opacity.
-  */
+  /* In the “closed” state, we visually hide the navigation items with opacity. */
 }
 
 .burger-menu[enabled=true][status=open] .burger-menu__panel > * {
   transition: transform 500ms cubic-bezier(0.17, 0.67, 0, 0.87) 400ms, opacity 500ms ease 400ms;
   transform: translateY(0);
   opacity: 1;
-  /*
-  When the panel is in the “open” state, we transition them back to being visible with full opacity.
-  */
+  /* When the panel is in the “open” state, we transition them back to being visible with full opacity. */
 }
 
 /* 
@@ -1395,15 +1386,17 @@ Convert burger bars into a 'close' icon when the menu is open.
 Sets the background and border of the main (central) bar to be transparent, and rotates the pseudo-elements in opposite directions to create a cross.
 */
 .burger-menu[enabled=true][status=open] .burger-menu__bar::before {
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, background 300ms 50ms ease;
   top: 0;
   transform: rotate(45deg);
+  background: var(--ltdk-clr-bkg);
 }
 
 .burger-menu[enabled=true][status=open] .burger-menu__bar::after {
-  transition: bottom 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: bottom 300ms 50ms ease, transform 300ms 350ms ease, background 300ms 50ms ease;
   bottom: 0;
   transform: rotate(-45deg);
+  background: var(--ltdk-clr-bkg);
 }
 
 .burger-menu[enabled=true][status=open] .burger-menu__bar {
@@ -1414,11 +1407,7 @@ Sets the background and border of the main (central) bar to be transparent, and 
 .site-header {
   padding: 2em 0;
   width: 100vw;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--color-light);
-  background-color: var(--color-primary);
-  box-shadow: 0 8px 32px RGBA(0, 0, 0, 0.25);
+  border-bottom: 8px solid var(--ltdk-clr-txt);
 }
 
 .site-header :focus {
@@ -1445,17 +1434,17 @@ Sets the background and border of the main (central) bar to be transparent, and 
   text-align: center;
   object-fit: contain;
 }
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: drop-shadow(0.25rem 0.25rem 1rem light-dark(rgba(64, 64, 64, 0.5), rgba(0, 0, 0, 0.5)));
+  }
+}
 
 #logo-home {
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   margin-block-end: 2rem;
   font-size: var(--font-size-6);
-}
-@media (prefers-color-scheme: dark) {
-  #logo-home {
-    filter: drop-shadow(0.25rem 0.25rem 1rem light-dark(rgba(64, 64, 64, 0.5), rgba(0, 0, 0, 0.5)));
-  }
 }
 
 #logo-site-header {
@@ -1598,11 +1587,6 @@ section.img-card {
 .flex-container {
   display: flex;
   gap: 5rem;
-}
-
-.flex-column {
-  flex-direction: column;
-  align-items: center;
 }
 
 .img-card h3 {
@@ -1777,7 +1761,7 @@ section.img-card {
   --dkmode-clr-hlt-txt: #293558;
   --dkmode-clr-txt: #d4d7de;
   --ltdk-clr-bkg: light-dark(#d4d7de, #293558);
-  --ltdk-clr-bkg-bdr: light-dark(#3e5085, #d4d7de);
+  --ltdk-clr-bkg-bdr: light-dark(#293558, #d4d7de);
   --ltdk-clr-txt: light-dark(#293558, #d4d7de);
   --ltdk-clr-hlt: light-dark(#293558, #d4d7de);
   --ltdk-clr-hlt-txt: light-dark(#566db0, #ffce32);
@@ -1798,10 +1782,6 @@ mark.highlight {
   background-color: var(--clr-brand-accent);
 }
 
-body {
-  background-image: light-dark(var(--color-bg-gradient-light), var(--color-bg-gradient-dark));
-}
-
 .background-border {
   position: fixed;
   top: 0;
@@ -1809,7 +1789,7 @@ body {
   z-index: 999;
   width: 100vw;
   height: 100%;
-  border: 8px solid light-dark(var(--color-border-light), var(--color-border-dark));
+  border: 8px solid var(--ltdk-clr-bkg-bdr);
   pointer-events: none;
 }
 
@@ -1958,6 +1938,7 @@ a {
 }
 
 /*\ ~~~ Sections ~~~ \*/
+/*\ All Pages \*/
 .page__section {
   padding-top: 1rem;
   padding-block-start: 1rem;
@@ -1968,11 +1949,6 @@ a {
   font-family: var(--font-headings-narrow);
   font-weight: 350;
   font-size: var(--font-size-2);
-}
-
-.page__section:first-of-type {
-  margin-bottom: 3rem;
-  margin-block-end: 3rem;
 }
 
 .page__section + .page__section {
@@ -1997,6 +1973,7 @@ a {
   font-weight: 450;
 }
 
+/*\ About Page \*/
 /* ~~~~~~~~~~~ *\
     Home Page
 \* ~~~~~~~~~~~ */
@@ -2134,7 +2111,6 @@ button {
   margin: 0;
   padding: 0;
   gap: 1rem;
-  justify-content: center;
 }
 
 .nav--primary .nav__list-item {
@@ -2172,8 +2148,8 @@ button {
 li.post-list__item {
   margin-block-end: 0;
   background-color: hsla(from var(--dklt-clr-bkg) 0 0 65/0.05);
-  border: 2px solid var(--color-brand-lightgrey);
-  border-left: 10px solid var(--color-brand-lightgrey);
+  border: 2px solid var(--ltdk-clr-bkg-bdr);
+  border-left: 10px solid var(--ltdk-clr-bkg-bdr);
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -2306,7 +2282,6 @@ div.post-author {
 
 /* SLIDER */
 .slider {
-  position: relative;
   overflow: hidden;
 }
 
