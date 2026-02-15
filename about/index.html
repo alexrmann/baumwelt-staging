@@ -45,8 +45,6 @@
 
   <!-- Analytics tracking -->
   
-  <script src="/baumwelt-staging/assets/js/analytics.js"></script>
-  
 
   <!-- TODO: Modify and create a FAVICONS include template -->
   <!-- <link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.ico" type="image/x-icon"> -->
@@ -89,7 +87,12 @@
     </div>
     <div class="body__foreground">
       <!-- Site Header / Banner -->
-      <header class="site-header" id="site-header">
+      <header 
+   
+  class="site-header grid grid-center" 
+  id="site-header"
+  
+  >
   <div
     class="container container--site-header flex flex-wrap gap-sm
     
@@ -100,7 +103,11 @@
     <a href="#main-content" class="skip-link" role="navigation">Skip to content</a>
 
     <!-- Site Title and Logo-->
-<div class="logo flex flex-center">
+<div 
+  
+  class="logo logo-site-header flex flex-center"
+  
+  >
   <a href="/baumwelt-staging/" aria-label="Home page" class="site-title site-head__brand">
 
     <!-- TODO: doesn't yet work when manually selecting color scheme -->
@@ -118,7 +125,7 @@
       <img
         class="transparent site-title"
         alt="Baumwelt"
-        id="logo-site-header"
+        id="logo-img"
         src="/baumwelt-staging/assets/images/logo/logo-orbital-2tone.png"
       />      
     </picture>
@@ -143,7 +150,8 @@
       <li class="nav__list-item"> 
         <a href="/baumwelt-staging/about/" 
         
-        class="active" aria-current="page"
+        class="nav__list-link | active" aria-current="page"
+        
         >
           About
         </a>
@@ -151,6 +159,9 @@
       
       <li class="nav__list-item"> 
         <a href="/baumwelt-staging/projects/" 
+        
+        class="nav__list-link"
+        
         >
           Projects
         </a>
@@ -158,6 +169,9 @@
       
       <li class="nav__list-item"> 
         <a href="/baumwelt-staging/news/" 
+        
+        class="nav__list-link"
+        
         >
           News
         </a>
@@ -165,6 +179,9 @@
       
       <li class="nav__list-item"> 
         <a href="/baumwelt-staging/contact/" 
+        
+        class="nav__list-link"
+        
         >
           Contact
         </a>

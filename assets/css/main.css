@@ -407,21 +407,6 @@ a:hover img {
   color: var(--ltdk-clr-hlt-txt);
 }
 
-/* Underline links on hover */
-header nav a::after {
-  content: "";
-  width: 100%;
-  opacity: 0;
-  height: 2px;
-  display: block;
-  background: currentColor;
-}
-
-header nav a:hover::after {
-  background-color: var(--color-highlight);
-  opacity: 1;
-}
-
 /*  ~~ Blockquotes ~~  */
 blockquote {
   background: #ddd;
@@ -467,7 +452,7 @@ img {
 body {
   margin-inline-start: auto;
   margin-inline-end: auto;
-  min-height: 100%;
+  min-height: 100vh;
   min-height: 100svh;
   min-height: 100dvh;
 }
@@ -577,26 +562,6 @@ td {
 /* ~~~~~~~~~~~~~~ */
 /* ~~~ LAYOUT ~~~ */
 /* ~~~~~~~~~~~~~~ */
-/* Wrapper */
-.wrapper {
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border: 1px solid red;
-}
-
-.wrapper__lg-screens {
-  max-width: 100rem;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  /* We specifically add left/right padding/margin here so other compositional CSS can comfortably manage vertical space, if needed. 
-
-  padding-inline-start: 1.25rem;
-  padding-inline-end: 1.25rem;
-
-  */
-}
-
 /* Flow */
 .flow > * + * {
   margin-block-start: var(--flow-space, 1em);
@@ -839,7 +804,7 @@ td {
 }
 
 /* Grid Centering */
-.grid--center {
+.grid-center {
   place-items: center;
 }
 
@@ -1180,6 +1145,38 @@ etc...
   margin: 1em auto;
 }
 
+/*  ~~~ WRAPPERS ~~~  */
+.wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper--home-banner {
+  display: flex;
+  align-items: center;
+  place-self: center;
+}
+
+.wrapper--lg-screens {
+  max-width: 100rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  /* We specifically add left/right padding/margin here so other compositional CSS can comfortably manage vertical space, if needed. 
+
+  padding-inline-start: 1.25rem;
+  padding-inline-end: 1.25rem;
+
+  */
+}
+
+@media (min-height: 940px) {
+  .wrapper--home-banner {
+    height: 100vh;
+    height: 100lvh;
+  }
+}
 html {
   height: 100%;
 }
@@ -1311,22 +1308,22 @@ html {
 }
 
 /* Handle the logo styling */
-#logo__burger-menu {
+.logo--burger-menu {
   max-width: 400px;
   margin-block-end: 3rem;
 }
 
-.burger-menu[enabled=true] #logo__burger-menu {
+.burger-menu[enabled=true] .logo--burger-menu {
   visibility: hidden;
   opacity: 0;
 }
 
-.burger-menu[enabled=true][status=open] #logo__burger-menu {
+.burger-menu[enabled=true][status=open] .logo--burger-menu {
   visibility: visible;
   opacity: 1;
 }
 
-.burger-menu[enabled=true][status=closed] #logo__burger-menu {
+.burger-menu[enabled=true][status=closed] .logo--burger-menu {
   visibility: hidden;
   opacity: 0;
 }
@@ -1404,10 +1401,15 @@ Sets the background and border of the main (central) bar to be transparent, and 
 }
 
 /* HEADER Styles */
+.home-header {
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
 .site-header {
   padding: 2em 0;
   width: 100vw;
-  border-bottom: 8px solid var(--ltdk-clr-txt);
+  border-bottom: 8px solid var(--ltdk-clr-bkg-bdr);
 }
 
 .site-header :focus {
@@ -1415,11 +1417,6 @@ Sets the background and border of the main (central) bar to be transparent, and 
 }
 
 .site-header a {
-  text-decoration: none;
-}
-
-.site-header .nav__list-item a {
-  font-weight: 500;
   text-decoration: none;
 }
 
@@ -1440,21 +1437,20 @@ Sets the background and border of the main (central) bar to be transparent, and 
   }
 }
 
-#logo-home {
+.logo-home {
   width: 100%;
   max-width: 800px;
-  margin-block-end: 2rem;
   font-size: var(--font-size-6);
 }
 
-#logo-site-header {
+.logo-site-header {
   max-width: 8rem;
   font-size: var(--font-size-4);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
   .container {
-    width: 90%;
+    width: 85%;
   }
   .navbar {
     flex-direction: column;
@@ -1542,6 +1538,24 @@ footer address,
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 750px) {
+  .container--site-footer {
+    flex-direction: column;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+  .footer-links ul {
+    text-align: center;
+  }
+  .masthead {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~ Card Module Style Template ~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1809,12 +1823,14 @@ h1 {
   color: light-dark(var(--ltmode-clr-txt), #d4d7de);
 }
 
-fieldset {
+.light-dark-panel {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-block-start: 1rem;
 }
 
 legend {
@@ -1978,12 +1994,6 @@ a {
     Home Page
 \* ~~~~~~~~~~~ */
 /* Header */
-#home-header {
-  height: 100vh;
-  width: 100%;
-  padding: 0 4em;
-}
-
 /* Content-specific Sections */
 .homepage-section__hero {
   background-color: var(--color-primary);
@@ -2095,16 +2105,15 @@ button {
 /*  ~~~~~~~~~~~~~~~~~~
     ~~~ Navigation ~~~ 
     ~~~~~~~~~~~~~~~~~~  */
-.navbar a {
-  align-self: center;
-  text-align: center;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  display: block;
-}
-
+/* PRIMARY NAVIGATION */
 .nav--primary {
   box-sizing: border-box;
+}
+
+.nav--primary .active {
+  background-color: light-dark(var(--color-bg-dark), var(--color-bg-light));
+  border-color: light-dark(var(--color-border-dark), var(--color-border-light));
+  color: light-dark(var(--color-text-dark), var(--color-text-light));
 }
 
 .nav__list {
@@ -2114,30 +2123,41 @@ button {
   justify-content: center;
 }
 
-.nav--primary .nav__list-item {
+.nav__list-item {
   flex: 0 1 auto;
   width: 14ch;
-  margin-bottom: 0;
-  margin-block-end: 0;
   border: 4px solid light-dark(var(--color-border-light), var(--color-border-dark));
   background-color: transparent;
   color: light-dark(var(--color-text-light), var(--color-text-dark));
   font-family: var(--font-headings);
 }
 
-.nav--primary .active {
-  background-color: light-dark(var(--color-bg-dark), var(--color-bg-light));
-  border-color: light-dark(var(--color-border-dark), var(--color-border-light));
-  color: light-dark(var(--color-text-dark), var(--color-text-light));
+.nav__list-link {
+  display: block;
+  align-self: center;
+  padding: 1rem var(--space-s-m);
+  text-align: center;
+  text-decoration: none;
+}
+
+.site-header .nav__list-link {
+  font-weight: 500;
+}
+
+/* Underline links on hover */
+.nav__list-item:not(:last-child) {
+  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 /* Change color on hover */
-.nav--primary .nav__list-item:hover {
+.nav__list-item:hover {
   background-color: light-dark(var(--color-bg-dark), var(--color-bg-light));
 }
 
-.nav--primary .nav__list-item a:hover {
+.nav__list-item a:hover {
   color: light-dark(var(--color-text-dark), var(--color-text-light));
+  font-weight: 500;
 }
 
 .post-list {
