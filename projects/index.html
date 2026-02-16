@@ -88,9 +88,9 @@
     <div class="body__foreground">
       <!-- Site Header / Banner -->
       <header 
-  
-  id="site-header" 
-  class="site-header grid grid-center"
+   
+  class="site-header grid grid-center" 
+  id="site-header"
   
   >
   <div
@@ -227,7 +227,11 @@
 
   <div class="flow"> 
     <section class="page__section featured-projects">
-  <h2>Featured Projects</h2>
+  <hgroup class="section__hgroup--primary">
+    <h2>Featured Projects</h2>
+    <p class="section__prelude">A description to provide context to why these are important, and thus featured.</p>
+  </hgroup>
+  
   <section class="page__section--inner"><ul class="project-list">
 
   
@@ -503,14 +507,18 @@
   
 </section>
 
-<!-- TODO: These next sections should be implemented as a filter (by category, alphabetical, etc.); Adjust text styles to reflect the new heading hierarchy -->
 <section class="page__section all-projects">
+  <hgroup class="section__hgroup--primary">
+    <h2>All Projects</h2>
+    <p class="section__prelude">This section is imagined to be filterable by project type and by name</p>
+  </hgroup>
 
-  <h2>All Projects</h2>
+  <!-- TODO: These inner sections should be implemented as a filter (by category, alphabetical, etc.); Adjust text styles to reflect the new heading hierarchy -->
 
   <section class="page__section--inner">
-    <h3 class="project-filter-category">By Category</h3>
-  
+    
+    <h3 class="project-filter-category">By Project Type</h3>
+    
 
 
 
@@ -973,14 +981,14 @@
 </ul>
 
 
+
   </section>
 
   <section class="page__section--inner">
-    <h3 class="project-filter-category">By Name (A–Z)</h3>
-  </section>
-  
 
-    <ul class="project-list">
+    <h3 class="project-filter-category">By Name (A–Z)</h3>
+    
+      <ul class="project-list">
 
     <!-- projects_sorted_az is passed in from the included page -->
      
@@ -1411,25 +1419,38 @@
 
   </ul>
 
+  </section>
+
 </section>
 
 <section id="ready-to-start" class="page__section call-to-action">
-  <hgroup class="section__hgroup">
-    <h2>Ready to start your project?</h2>
+  <hgroup class="section__hgroup--primary">
+    <h2 class="section__heading">Ready to start your project?</h2>
     <p class="section__prelude">We're here to help.</p>
   </hgroup>
   <section class="page__section--inner">
-    <p><a href="tel:+12533451400">Give us a call</a>, and we'll set up a meeting!</p> <p>Alternatively, <a href="mailto:info@thebaumwelt.com?subject=Website%20Inquiry&body=Feel%20free%20to%20delete%20this%20text%20and%20insert%20your%20own%20information.%20You%20can%20also%20change%20the%20subject%20line%20if%20you%20wish.%0A%0ASo%20we%20can%20help%20you%20best%2C%20we%20ask%20that%20you%20include%20the%20following%20information%20at%20minimum%3A%0A%0A-%20your%20name%2C%20%0A-%20a%20description%20of%20your%20project%0A-%20your%20project's%20timeframe%20and%20budget%20(optional)%2C%20and%0A-%20how%20you%20prefer%20to%20be%20reached%20(e.g.%2C%20email%2C%20phone%2C%20time%20of%20day).">send us an email</a> including the following information: </p>
-    <ul>
-      <li>your name, </li>
-      <li>a description of your project, </li>
-      <li>your project's timeframe and budget (optional), and </li>
-      <li>how you prefer to be reached (e.g., email, phone, time of day).</li>
+    <ul class="flex-columns about-lists">   
+      <li>  
+        <h3>Get in touch!</h3>
+        <p><a href="tel:+12533451400">Give us a call</a>, and we'll set up a meeting!</p> <p>Alternatively, <a href="mailto:info@thebaumwelt.com?subject=Website%20Inquiry&body=Feel%20free%20to%20delete%20this%20text%20and%20insert%20your%20own%20information.%20You%20can%20also%20change%20the%20subject%20line%20if%20you%20wish.%0A%0ASo%20we%20can%20help%20you%20best%2C%20we%20ask%20that%20you%20include%20the%20following%20information%20at%20minimum%3A%0A%0A-%20your%20name%2C%20%0A-%20a%20description%20of%20your%20project%0A-%20your%20project's%20timeframe%20and%20budget%20(optional)%2C%20and%0A-%20how%20you%20prefer%20to%20be%20reached%20(e.g.%2C%20email%2C%20phone%2C%20time%20of%20day).">send us an email.</a> To help you best, please include the following information: </p>
+        <ul>
+          <li>your name, </li>
+          <li>a description of your project, </li>
+          <li>your project's timeframe and budget (optional), and </li>
+          <li>how you prefer to be reached (e.g., email, phone, time of day).</li>
+        </ul>
+      </li>
+      <li class="flow flex flex-column">
+        <div class="content__division">
+          <h3>Not sure where to start?</h3>
+          <p>We're happy to help you fill in the gaps. Don't hesitate to reach out!</p>
+        </div>
+        <div class="content__division">
+          <h3>Need more information?</h3>
+          <p>Use the navigation links below to browse our projects and stay up-to-date with Baumwelt news.</p>
+        </div>
+      </li>
     </ul>
-    <h3>Not sure where to start?</h3>
-    <p>We're happy to help you fill in the gaps. Don't hesitate to reach out!</p>
-    <h3>Need more information?</h3>
-    <p>Use the navigation links below to browse our projects and stay up-to-date with Baumwelt news.</p>
   </section>
 </section>
 
