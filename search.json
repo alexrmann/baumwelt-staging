@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Template Post",
+      "category" : "",
+      "tags"     : "tagname, a-multi-word-tag",
+      "url"      : "baumwelt-staging/news/template-news/",
+      "date"     : "22 Feb 2026",
+      "excerpt"  : "This should be a 1-2 sentence introductory statement about the project."
+    } ,
+  
+    {
       "title"    : "Meeting Minutes (2/20/26)",
       "category" : "",
       "tags"     : "minutes, company",
@@ -19,21 +28,21 @@
     } ,
   
     {
-      "title"    : "Penmet Minigolf",
+      "title"    : "PenMet Parks Minigolf Update",
       "category" : "",
       "tags"     : "project, update",
       "url"      : "baumwelt-staging/news/penmet-minigolf/",
       "date"     : "01 May 2025",
-      "excerpt"  : "First shipment arrives at PenMet Parks Minigolf Course."
+      "excerpt"  : "The first shipment of site features has arrived at the soon to be opening minigolf course."
     } ,
   
     {
-      "title"    : "Spring Update",
+      "title"    : "Spring Update from the Field",
       "category" : "",
       "tags"     : "update, project",
       "url"      : "baumwelt-staging/news/spring-update/",
       "date"     : "01 Apr 2025",
-      "excerpt"  : "Spring Update from the Field"
+      "excerpt"  : "A new season of landscape design is underway at this lakeside villa."
     } 
   
 ]

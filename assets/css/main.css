@@ -321,11 +321,13 @@ li {
 /*  ~~ Code Blocks & Preformatted Text ~~  */
 code {
   font-family: var(--font-code);
-  background-color: var(--color-code-background);
+  color: var(--ltdk-clr-code-txt);
+  background-color: var(--ltdk-clr-code-bkg);
   padding: 0;
   padding-block-start: 0.2em;
   padding-block-end: 0.2em;
   margin: 0;
+  margin-inline: 2px;
   font-size: 85%;
   border-radius: 3px;
 }
@@ -435,8 +437,8 @@ blockquote p {
 /*  ~~~ IMAGES ~~~  */
 /* This will set a basic display when an image is not available. */
 img {
-  color: var(--color-text-light);
-  background-color: #bcbcbc;
+  color: var(--ltdk-clr-txt);
+  background-color: rgba(188, 188, 188, 0.3);
   display: grid;
   place-items: center;
   object-fit: contain;
@@ -595,6 +597,22 @@ td {
 }
 
 /* Padding */
+.pad-1 {
+  padding: 1em;
+}
+
+.pad-1-5 {
+  padding: 1.5em;
+}
+
+.pad-1r {
+  padding: 1rem;
+}
+
+.pad-1-5r {
+  padding: 1.5rem;
+}
+
 .padding-block-end-sm {
   padding-block-end: 1em;
 }
@@ -949,6 +967,15 @@ td {
 .transparent {
   background-color: transparent;
   /* Use for PNG and SVG files. */
+}
+
+/* ~~~ Object Fit ~~~ */
+.cover {
+  object-fit: cover !important;
+}
+
+.contain {
+  object-fit: contain !important;
 }
 
 /* ~~~ Aspect Ratios ~~~ */
@@ -1735,7 +1762,7 @@ section.img-card {
       Font Stacks 
   \* ~~~~~~~~~~~~~ */
   --font-sans: "Work Sans", "Roboto", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-code: "Source Code Pro", "Space Mono" Menlo, Consolas, "DejaVu Sans Mono", ui-monospace, monospace;
+  --font-code: "Source Code Pro", "Space Mono", Menlo, Consolas, "DejaVu Sans Mono", ui-monospace, monospace;
   --font-serif: "Source Serif 4", "Times New Roman", serif;
   --font-transitional: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   --font-headings: "Space Grotesk", "Recursive", "Helvetica Neue",
@@ -1820,10 +1847,13 @@ section.img-card {
   --dkmode-clr-txt: #d4d7de;
   --ltdk-clr-bkg: light-dark(#d4d7de, #293558);
   --ltdk-clr-bkg-bdr: light-dark(#293558, #d4d7de);
+  --ltdk-clr-bdr: light-dark(#293558, #d4d7de);
   --ltdk-clr-txt: light-dark(#293558, #d4d7de);
   --ltdk-clr-hlt: light-dark(#293558, #d4d7de);
   --ltdk-clr-hlt-txt: light-dark(#566db0, #ffce32);
   --ltdk-clr-hlt-txt-visited: #566db0;
+  --ltdk-clr-code-txt: light-dark(#d4d7de, rgb(43, 42, 51));
+  --ltdk-clr-code-bkg: light-dark(rgb(43, 42, 51), #d4d7de);
   --dklt-clr-bkg: light-dark(#293558, #d4d7de);
 }
 
@@ -2261,6 +2291,7 @@ li.post-list__item {
 .post-img {
   flex: 0 1;
   aspect-ratio: 16/9;
+  border-bottom: 2px solid var(--ltdk-clr-bkg-bdr);
 }
 
 .post-content {
@@ -2384,7 +2415,6 @@ div.post-author {
 
 .slider-img {
   border: solid 2px light-dark(var(--color-bg-border-light), var(--color-bg-border-dark));
-  color: var(--color-text-light);
   font-size: var(--font-size-1);
 }
 
