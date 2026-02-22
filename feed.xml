@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-22T12:20:22-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Template Post</title><link href="/baumwelt-staging/news/template-news/" rel="alternate" type="text/html" title="Template Post" /><published>2026-02-22T00:00:00-08:00</published><updated>2026-02-22T00:00:00-08:00</updated><id>/baumwelt-staging/news/template-news</id><content type="html" xml:base="/baumwelt-staging/news/template-news/"><![CDATA[<p>This is the news post body. Enter your Markdown here.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-22T12:32:24-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Template Post</title><link href="/baumwelt-staging/news/template-news/" rel="alternate" type="text/html" title="Template Post" /><published>2026-02-22T00:00:00-08:00</published><updated>2026-02-22T00:00:00-08:00</updated><id>/baumwelt-staging/news/template-news</id><content type="html" xml:base="/baumwelt-staging/news/template-news/"><![CDATA[<p>This is the news post body. Enter your Markdown here.</p>
 
 <h2 id="file-name">File Name</h2>
 
@@ -74,7 +74,7 @@
 
 <h3 id="remaining-content-">Remaining Content 🔴</h3>
 
-<p>See the <a href="#use-content-templates">Content Templates</a> section below for formatting guidance.</p>
+<p>See the <a href="#content-templates">Content Templates</a> section below for formatting guidance.</p>
 
 <ul>
   <li>Projects
