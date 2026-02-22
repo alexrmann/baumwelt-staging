@@ -1,51 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-21T12:06:25-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Meeting Minutes (2/20/26)</title><link href="/baumwelt-staging/news/meeting-minutes/" rel="alternate" type="text/html" title="Meeting Minutes (2/20/26)" /><published>2026-02-20T00:00:00-08:00</published><updated>2026-02-20T00:00:00-08:00</updated><id>/baumwelt-staging/news/meeting-minutes</id><content type="html" xml:base="/baumwelt-staging/news/meeting-minutes/"><![CDATA[<h2 id="key-dates">Key Dates</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-21T17:42:45-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Meeting Minutes (2/20/26)</title><link href="/baumwelt-staging/news/meeting-minutes/" rel="alternate" type="text/html" title="Meeting Minutes (2/20/26)" /><published>2026-02-20T00:00:00-08:00</published><updated>2026-02-20T00:00:00-08:00</updated><id>/baumwelt-staging/news/meeting-minutes</id><content type="html" xml:base="/baumwelt-staging/news/meeting-minutes/"><![CDATA[<hr />
+<h2 id="key-dates">Key Dates</h2>
 
-<p>Content Deadline: <strong>March 13</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Deliverable</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Deadline</td>
+      <td>March 13</td>
+    </tr>
+    <tr>
+      <td>Pre-launch Review</td>
+      <td>March 20</td>
+    </tr>
+    <tr>
+      <td>Launch Date</td>
+      <td>March 27</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Pre-launch Review: <strong>March 20</strong></p>
+<hr />
 
-<p>Launch Date: <strong>March 27</strong></p>
-
-<h2 id="derrick-to-do">Derrick to-do</h2>
+<h2 id="derrick-to-do-list">Derrick To-Do List</h2>
 
 <p>Here’s the remaining content I will need from you to complete the site. Feel free to deliver it in portions, or all at once. I’ll need to receive everything by <strong><em>March 13th</em></strong> to have sufficient time to incorporate it. Anything you can provide early is always welcome! :)</p>
 
+<p>I have marked priority as follows:</p>
+
 <ul>
-  <li>Projects</li>
-  <li>Founder’s Message</li>
-  <li>News</li>
+  <li>🔴 High priority</li>
+  <li>🟠 Moderate priority</li>
+  <li>🟡 Lower priority</li>
 </ul>
 
-<h3 id="contact-page">Contact Page</h3>
+<h3 id="remaining-content-">Remaining Content 🔴</h3>
+
+<p>See the <a href="#use-content-templates">Content Templates</a> section below for formatting guidance.</p>
+
+<ul>
+  <li>Projects
+    <ul>
+      <li>What to keep</li>
+      <li>What to remove</li>
+      <li>What to add</li>
+    </ul>
+  </li>
+  <li>News
+    <ul>
+      <li>Anything beyond the two posts I’ve already included.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="contact-page-">Contact Page 🟠</h3>
+
+<p>At the moment, I am imagining the following content:</p>
+<ul>
+  <li>Map w/ Location Pin (interactive <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code>)</li>
+  <li>Directions</li>
+  <li>Parking?</li>
+  <li>A picture of your building or “storefront”?</li>
+</ul>
 
 <p>If you have any particular needs / desires for the <a href="/baumwelt-staging/contact/">contact page</a>, please let me know ASAP.</p>
 
-<h3 id="review-markdown-guide">Review Markdown Guide</h3>
-
-<p>Site content, including news and projects, should conform to Markdown syntax whenever possible. Jekyll (our site generator) interprets Markdown files (.md) and converts them to HTML.</p>
-
-<p>Writing files with Markdown syntax is the simplest way to add new content to the site. Markdown is easy to learn and use. Visit <a href="https://www.markdownguide.org/">Markdown Guide</a> for instructions.</p>
+<h3 id="founders-message-">Founder’s Message 🟡</h3>
 
 <ul>
-  <li>Start here: <a href="https://www.markdownguide.org/getting-started/">Getting Started</a></li>
-  <li>Most content can be created with the <a href="https://www.markdownguide.org/basic-syntax/">Basic Syntax</a>.</li>
-  <li>More complex formatting options are outlined in the <a href="https://www.markdownguide.org/extended-syntax/">Extended Syntax</a></li>
+  <li>A brief self-introduction or description for the About page</li>
+  <li>A headshot or other self portrait</li>
 </ul>
 
-<p>If this is too cumbersome, I am able to convert Word documents (.docx) to Markdown using a tool called Pandoc. Any images should be included in the Word file. We’ll need to test this out to be sure it will be a functional alternative to writing .md files directly.</p>
+<hr />
 
-<ul>
-  <li>For more information see <a href="https://blog.markdowntools.com/posts/how-to-convert-word-documents-to-markdown">How to Convert Word Documents to Markdown: Complete Guide</a></li>
-</ul>
-
-<h2 id="alex-to-do">Alex to-do</h2>
+<h2 id="alex-to-do-list">Alex To-Do List</h2>
 
 <p>So we can track progress, I will check these off as I complete them.</p>
+
+<h3 id="content-templates">Content Templates</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Share standard templates with Derrick for:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />News</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Projects</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="favicon">Favicon</h3>
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Two-tone</li>
+</ul>
+
+<h3 id="light-dark-theme">Light-Dark Theme</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Investigate bug</li>
 </ul>
 
 <h3 id="animations-esp-about-page">Animations (esp. About Page)</h3>
@@ -72,11 +128,21 @@
 <h3 id="projects-page">Projects Page</h3>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Search / Sort / Filter / Tags
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Search
     <ul class="task-list">
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />by Category (Tags)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Search bar</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Filter
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />by Tags</li>
       <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />by Location (e.g., “King County”)</li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Alphabetical (optional)</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Sort (use <code class="language-plaintext highlighter-rouge">&lt;details&gt;</code>)
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />by Name (A-Z) (optional)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />by Category</li>
     </ul>
   </li>
 </ul>
@@ -85,11 +151,11 @@
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Remove dummy content</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Remove meeting minutes</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adjust handling / style of featured images + separation from text</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Remove meeting minutes</li>
 </ul>
 
-<h3 id="contact-page-1">Contact Page</h3>
+<h3 id="contact-page">Contact Page</h3>
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Map</li>
@@ -103,7 +169,38 @@
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Visually distinguish from other page content</li>
 </ul>
 
+<hr />
+
+<h2 id="content-templates-1">Content Templates</h2>
+
+<p>I will provide standard templates you can use to create new posts and project pages. When we next meet, we’ll review them together, but feel free to make use of them now. Each template has two key properties:</p>
+
+<ul>
+  <li>The content is written using the Markdown syntax</li>
+  <li>Front Matter defines data about the content</li>
+</ul>
+
+<h3 id="markdown">Markdown</h3>
+
+<p>All news posts and project pages will need to be written using the <a href="https://www.markdownlang.com/">Markdown</a> syntax. Jekyll (our site generator) interprets Markdown files (.md) and converts them to HTML.</p>
+
+<p>While Word files can be converted to Markdown, writing files directly in Markdown is the simplest way to add content to the site. Markdown is easy to learn and use. The <a href="https://www.markdownguide.org/">Markdown Guide</a> is an excellent resource for learning Markdown.</p>
+
+<ul>
+  <li>Start here: <a href="https://www.markdownguide.org/getting-started/">Getting Started</a></li>
+  <li>Most content can be created with the <a href="https://www.markdownguide.org/basic-syntax/">Basic Syntax</a>.</li>
+  <li>More complex formatting options are outlined in the <a href="https://www.markdownguide.org/extended-syntax/">Extended Syntax</a></li>
+</ul>
+
+<h3 id="front-matter">Front Matter</h3>
+
+<p>These templates will also include “front matter” where data about the content can be defined (e.g., title, author, tags, etc.). Standard data fields have semantic meaning for the site, including auto-populating sections of page layouts, as well as site-wide content organization. Here’s an example of <a href="https://jekyllrb.com/docs/front-matter/">how front matter is used in Jekyll</a>.</p>
+
+<hr />
+
 <h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>This page is just for our use now. I will remove it from the <em>production</em> version (i.e. the final build). However, I think the Content Templates section could be expanded into a broader documentation of the site which you may find helpful to refer back to in the future. Documentation is out of scope at this time, but it’s something to think about.</p>
 
 <p>If there’s anything you think is missing or needs clarification, feel free to <a href="mailto:alex@alexrmann.com">email me</a>!</p>
 

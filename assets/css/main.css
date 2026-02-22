@@ -497,19 +497,30 @@ main:focus {
 /* For ::selection styles, see brand-colors.scss */
 /* ~~~ TABLES ~~~ */
 table {
+  border: 2px solid;
   border-collapse: collapse;
   border-spacing: 0;
   margin-block-end: 1rem;
+  font-size: 1.25rem;
 }
 
-td,
 th {
-  padding: 0;
+  padding-block: 0.5em;
 }
 
+td {
+  padding-block: 0.25em;
+}
+
+th,
+td {
+  padding-inline: 1em;
+}
+
+th,
 tr,
 td {
-  border: 0;
+  border: 1px solid;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ */
