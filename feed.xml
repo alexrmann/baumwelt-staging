@@ -1,38 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-22T12:32:24-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Template Post</title><link href="/baumwelt-staging/news/template-news/" rel="alternate" type="text/html" title="Template Post" /><published>2026-02-22T00:00:00-08:00</published><updated>2026-02-22T00:00:00-08:00</updated><id>/baumwelt-staging/news/template-news</id><content type="html" xml:base="/baumwelt-staging/news/template-news/"><![CDATA[<p>This is the news post body. Enter your Markdown here.</p>
-
-<h2 id="file-name">File Name</h2>
-
-<p>Remove the underscore (<code class="language-plaintext highlighter-rouge">_</code>) from the front of the template when naming the project. The underscore tells Jekyll not to process and include the file in the site.</p>
-
-<p>You may also author posts in the <code class="language-plaintext highlighter-rouge">_drafts</code> folder. When the post is ready to publish, move it to the <code class="language-plaintext highlighter-rouge">_posts</code> folder.</p>
-
-<p>Every post must include the year, month, and day (i.e. <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code>) and a lowercase, hyphen-separated name (e.g., <code class="language-plaintext highlighter-rouge">post-name</code>). If no title is provided in the front matter, the name of the file (excluding the date) will be used as the title automatically. Use a hyphen (<code class="language-plaintext highlighter-rouge">-</code>) to separate each part of the date and title in the file name (i.e. <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-post-name</code>).</p>
-
-<p>The file extensions should always be <code class="language-plaintext highlighter-rouge">.md</code> to denote its use of Markdown syntax. HTML (<code class="language-plaintext highlighter-rouge">.html</code>) is also valid, but it will not accept Markdown syntax and must use valid HTML markup.</p>
-
-<h2 id="front-matter">Front Matter</h2>
-
-<p>The project <em>title</em> is the project name. Each word should be capitalized. The <em>author</em> is a hyphen (<code class="language-plaintext highlighter-rouge">-</code>) separated first and lastname.</p>
-
-<p>The <em>featured-img</em> is a file path. Change <code class="language-plaintext highlighter-rouge">filename.ext</code> to match the file name and extension.</p>
-
-<p>The <em>featured-img-alt</em> is a short, objective description of the image for screen readers.</p>
-
-<p><em>Tags</em> accepts multiple single words or hyphen-separated (<code class="language-plaintext highlighter-rouge">-</code>) multi-word labels (e.g., habitat-restoration). You can use and create as many new tags as you need. Enclosing brackets (<code class="language-plaintext highlighter-rouge">[ ]</code>) are optional, however if you use them, you must separate each entry with a comma (<code class="language-plaintext highlighter-rouge">,</code>). Here they are used to visually distinguish the tag array, which is a series of entries.</p>
-
-<h3 id="seo">SEO</h3>
-
-<p>Along with the post title, these front matter categories are used by a Jekyll plugin to provide search engines and link sharing with descriptive content about the post.</p>
-
-<p><em>Image</em> is an optional field. It can be the same file as the featured image, or a different image optimized for link thumbnails.</p>
-
-<p>Finally, <em>excerpt</em> is a very short introductory description of the project. It displays with each project listed on the News page. If left blank, it will use the first paragraph in the post body.</p>
-
-<h2 id="general-authoring-guidelines">General authoring guidelines</h2>
-
-<p>The title is a top-level heading (<code class="language-plaintext highlighter-rouge">#</code>). No heading in the body should be higher than second-level (<code class="language-plaintext highlighter-rouge">##</code>). Avoid using headings deeper than the fourth-level (<code class="language-plaintext highlighter-rouge">####</code>).</p>
-
-<p>If you choose not to fill in a front matter field (esp. <em>featured-img</em> and <em>featured-img-alt</em>) it is best to remove any placeholder content and leave the field blank.</p>]]></content><author><name>derrick-eberle</name></author><category term="tagname" /><category term="a-multi-word-tag" /><summary type="html"><![CDATA[This should be a 1-2 sentence introductory statement about the project.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/baumwelt-staging/assets/images/posts/file-name.ext" /><media:content medium="image" url="/baumwelt-staging/assets/images/posts/file-name.ext" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Meeting Minutes (2/20/26)</title><link href="/baumwelt-staging/news/meeting-minutes/" rel="alternate" type="text/html" title="Meeting Minutes (2/20/26)" /><published>2026-02-20T00:00:00-08:00</published><updated>2026-02-20T00:00:00-08:00</updated><id>/baumwelt-staging/news/meeting-minutes</id><content type="html" xml:base="/baumwelt-staging/news/meeting-minutes/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-22T14:22:36-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Meeting Minutes (2/20/26)</title><link href="/baumwelt-staging/news/meeting-minutes/" rel="alternate" type="text/html" title="Meeting Minutes (2/20/26)" /><published>2026-02-23T00:00:00-08:00</published><updated>2026-02-23T00:00:00-08:00</updated><id>/baumwelt-staging/news/meeting-minutes</id><content type="html" xml:base="/baumwelt-staging/news/meeting-minutes/"><![CDATA[<hr />
 <h2 id="key-dates">Key Dates</h2>
 
 <table>
@@ -118,10 +84,10 @@
 
 <h3 id="content-templates-">Content Templates 🔴</h3>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Share standard templates with Derrick for:
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Share standard templates with Derrick for:
     <ul class="task-list">
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />News</li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Projects</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />News</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Projects</li>
     </ul>
   </li>
 </ul>
@@ -207,7 +173,9 @@
 
 <h2 id="content-templates">Content Templates</h2>
 
-<p>I will provide standard templates you can use to create new posts and project pages. When we next meet, we’ll review them together, but feel free to make use of them now. Each template has two key properties:</p>
+<p>I have emailed you standard templates for creating news posts and project pages. We can review them together when we next meet, but I encourage you to use them now.</p>
+
+<p>Each template file describes how to use it. They each have two key properties:</p>
 
 <ul>
   <li>The content is written using the Markdown syntax</li>
@@ -218,7 +186,9 @@
 
 <p>All news posts and project pages will need to be written using the <a href="https://www.markdownlang.com/">Markdown</a> syntax. Jekyll (our site generator) interprets Markdown files (.md) and converts them to HTML.</p>
 
-<p>While Word files can be converted to Markdown, writing files directly in Markdown is the simplest way to add content to the site. Markdown is easy to learn and use. The <a href="https://www.markdownguide.org/">Markdown Guide</a> is an excellent resource for learning Markdown.</p>
+<p>While Word files can be converted to Markdown, writing files directly in Markdown is likely faster and less error-prone. Markdown is also easy to learn. The <a href="https://www.markdownguide.org/">Markdown Guide</a> is an excellent resource for learning Markdown.</p>
+
+<p>I recommend using a simple text editor to author Markdown. Notepad will work, but something like <a href="https://www.sublimetext.com/">Sublime Text</a> provides syntax highlighting, making it easier to both read and write.</p>
 
 <ul>
   <li>Start here: <a href="https://www.markdownguide.org/getting-started/">Getting Started</a></li>
@@ -238,7 +208,41 @@
 
 <p>If there’s anything you think is missing or needs clarification, feel free to <a href="mailto:alex@alexrmann.com">email me</a>!</p>
 
-<p>-Alex</p>]]></content><author><name>alex-mann</name></author><category term="minutes" /><category term="company" /><summary type="html"><![CDATA[Summary of remaining work and key delivery dates.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/baumwelt-staging/assets/images/logo-full-2tone.png" /><media:content medium="image" url="/baumwelt-staging/assets/images/logo-full-2tone.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Our New Logo</title><link href="/baumwelt-staging/news/baumwelt-rebrand/" rel="alternate" type="text/html" title="Introducing Our New Logo" /><published>2025-07-07T00:00:00-07:00</published><updated>2025-07-07T00:00:00-07:00</updated><id>/baumwelt-staging/news/baumwelt-rebrand</id><content type="html" xml:base="/baumwelt-staging/news/baumwelt-rebrand/"><![CDATA[<p>As part of our recent rebrand, we’re excited to unveil a new logo that captures the spirit and vision of our practice. At its core, the circular form suggests a horizon—a rising or setting sun—drawing the eye inward and evoking a sense of place and atmosphere. The blue palette nods to the “blue planet,” grounding our work in environmental awareness and global context.</p>
+<p>-Alex</p>]]></content><author><name>alex-mann</name></author><category term="minutes" /><category term="company" /><summary type="html"><![CDATA[Summary of remaining work and key delivery dates.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/baumwelt-staging/assets/images/logo-full-2tone.png" /><media:content medium="image" url="/baumwelt-staging/assets/images/logo-full-2tone.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Template Post</title><link href="/baumwelt-staging/news/template-news/" rel="alternate" type="text/html" title="Template Post" /><published>2026-02-22T00:00:00-08:00</published><updated>2026-02-22T00:00:00-08:00</updated><id>/baumwelt-staging/news/template-news</id><content type="html" xml:base="/baumwelt-staging/news/template-news/"><![CDATA[<p>This is the news post body. Enter your Markdown here.</p>
+
+<h2 id="file-name">File Name</h2>
+
+<p>Remove the underscore (<code class="language-plaintext highlighter-rouge">_</code>) from the front of the template when naming the project. The underscore tells Jekyll not to process and include the file in the site.</p>
+
+<p>You may also author posts in the <code class="language-plaintext highlighter-rouge">_drafts</code> folder. When the post is ready to publish, move it to the <code class="language-plaintext highlighter-rouge">_posts</code> folder.</p>
+
+<p>Every post must include the year, month, and day (i.e. <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code>) and a lowercase, hyphen-separated name (e.g., <code class="language-plaintext highlighter-rouge">post-name</code>). If no title is provided in the front matter, the name of the file (excluding the date) will be used as the title automatically. Use a hyphen (<code class="language-plaintext highlighter-rouge">-</code>) to separate each part of the date and title in the file name (i.e. <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-post-name</code>).</p>
+
+<p>The file extensions should always be <code class="language-plaintext highlighter-rouge">.md</code> to denote its use of Markdown syntax. HTML (<code class="language-plaintext highlighter-rouge">.html</code>) is also valid, but it will not accept Markdown syntax and must use valid HTML markup.</p>
+
+<h2 id="front-matter">Front Matter</h2>
+
+<p>The project <em>title</em> is the project name. Each word should be capitalized. The <em>author</em> is a hyphen (<code class="language-plaintext highlighter-rouge">-</code>) separated first and lastname.</p>
+
+<p>The <em>featured-img</em> is a file path. Change <code class="language-plaintext highlighter-rouge">filename.ext</code> to match the file name and extension.</p>
+
+<p>The <em>featured-img-alt</em> is a short, objective description of the image for screen readers.</p>
+
+<p><em>Tags</em> accepts multiple single words or hyphen-separated (<code class="language-plaintext highlighter-rouge">-</code>) multi-word labels (e.g., habitat-restoration). You can use and create as many new tags as you need. Enclosing brackets (<code class="language-plaintext highlighter-rouge">[ ]</code>) are optional, however if you use them, you must separate each entry with a comma (<code class="language-plaintext highlighter-rouge">,</code>). Here they are used to visually distinguish the tag array, which is a series of entries.</p>
+
+<h3 id="seo">SEO</h3>
+
+<p>Along with the post title, these front matter categories are used by a Jekyll plugin to provide search engines and link sharing with descriptive content about the post.</p>
+
+<p><em>Image</em> is an optional field. It can be the same file as the featured image, or a different image optimized for link thumbnails.</p>
+
+<p>Finally, <em>excerpt</em> is a very short introductory description of the project. It displays with each project listed on the News page. If left blank, it will use the first paragraph in the post body.</p>
+
+<h2 id="general-authoring-guidelines">General authoring guidelines</h2>
+
+<p>The title is a top-level heading (<code class="language-plaintext highlighter-rouge">#</code>). No heading in the body should be higher than second-level (<code class="language-plaintext highlighter-rouge">##</code>). Avoid using headings deeper than the fourth-level (<code class="language-plaintext highlighter-rouge">####</code>).</p>
+
+<p>If you choose not to fill in a front matter field (esp. <em>featured-img</em> and <em>featured-img-alt</em>) it is best to remove any placeholder content and leave the field blank.</p>]]></content><author><name>derrick-eberle</name></author><category term="tagname" /><category term="a-multi-word-tag" /><summary type="html"><![CDATA[This should be a 1-2 sentence introductory statement about the project.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/baumwelt-staging/assets/images/posts/file-name.ext" /><media:content medium="image" url="/baumwelt-staging/assets/images/posts/file-name.ext" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Our New Logo</title><link href="/baumwelt-staging/news/baumwelt-rebrand/" rel="alternate" type="text/html" title="Introducing Our New Logo" /><published>2025-07-07T00:00:00-07:00</published><updated>2025-07-07T00:00:00-07:00</updated><id>/baumwelt-staging/news/baumwelt-rebrand</id><content type="html" xml:base="/baumwelt-staging/news/baumwelt-rebrand/"><![CDATA[<p>As part of our recent rebrand, we’re excited to unveil a new logo that captures the spirit and vision of our practice. At its core, the circular form suggests a horizon—a rising or setting sun—drawing the eye inward and evoking a sense of place and atmosphere. The blue palette nods to the “blue planet,” grounding our work in environmental awareness and global context.</p>
 
 <p>The abstract form can also be read as a tree in plan view, merging natural systems with design thinking. A surrounding orbital band hints at movement and unity—representing the interconnectedness of landscape, ecology, and people.</p>
 

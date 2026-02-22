@@ -1,21 +1,21 @@
 [
   
     {
+      "title"    : "Meeting Minutes (2/20/26)",
+      "category" : "",
+      "tags"     : "minutes, company",
+      "url"      : "baumwelt-staging/news/meeting-minutes/",
+      "date"     : "23 Feb 2026",
+      "excerpt"  : "Summary of remaining work and key delivery dates."
+    } ,
+  
+    {
       "title"    : "Template Post",
       "category" : "",
       "tags"     : "tagname, a-multi-word-tag",
       "url"      : "baumwelt-staging/news/template-news/",
       "date"     : "22 Feb 2026",
       "excerpt"  : "This should be a 1-2 sentence introductory statement about the project."
-    } ,
-  
-    {
-      "title"    : "Meeting Minutes (2/20/26)",
-      "category" : "",
-      "tags"     : "minutes, company",
-      "url"      : "baumwelt-staging/news/meeting-minutes/",
-      "date"     : "20 Feb 2026",
-      "excerpt"  : "Summary of remaining work and key delivery dates."
     } ,
   
     {
