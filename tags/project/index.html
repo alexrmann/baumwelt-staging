@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="no-js">
   <!-- Head -->
   <head>
   <!-- Head Boilerplate -->
@@ -8,7 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Javascript detection script -->
-  <script type="module">document.documentElement.classList.replace('no-js', 'js');</script>
+  <script type="module">
+    document.documentElement.classList.replace('no-js', 'js');
+  </script>
 
   <!-- TODO: Add any external scripts and set the async or defer attribute -->
 
@@ -417,7 +419,8 @@
     
     <!-- Site Javascript -->
     <script src="/baumwelt-staging/assets/js/light-dark.js" defer></script>
-    <!-- This value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
+    <!-- The "module" type value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
     <script src="/baumwelt-staging/assets/js/burger-menu.js" type="module"></script>
+    <script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script>
   </body>
 </html>

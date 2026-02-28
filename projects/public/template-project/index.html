@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="no-js">
   <!-- Head -->
   <head>
   <!-- Head Boilerplate -->
@@ -8,7 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Javascript detection script -->
-  <script type="module">document.documentElement.classList.replace('no-js', 'js');</script>
+  <script type="module">
+    document.documentElement.classList.replace('no-js', 'js');
+  </script>
 
   <!-- TODO: Add any external scripts and set the async or defer attribute -->
 
@@ -34,13 +36,13 @@
 <meta property="og:image" content="/baumwelt-staging/assets/images/logo-full-2tone.png" />
 <meta property="og:image:alt" content="Site logo" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-22T14:22:36-08:00" />
+<meta property="article:published_time" content="2026-02-28T14:05:05-08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/baumwelt-staging/assets/images/logo-full-2tone.png" />
 <meta name="twitter:image:alt" content="Site logo" />
 <meta property="twitter:title" content="Template Project" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alex R. Mann"},"dateModified":"2026-02-22T14:22:36-08:00","datePublished":"2026-02-22T14:22:36-08:00","description":"This should be a 1-2 sentence introductory statement about the project.","headline":"Template Project","image":{"alt":"Site logo","url":"/baumwelt-staging/assets/images/logo-full-2tone.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"/baumwelt-staging/projects/public/template-project/"},"url":"/baumwelt-staging/projects/public/template-project/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alex R. Mann"},"dateModified":"2026-02-28T14:05:05-08:00","datePublished":"2026-02-28T14:05:05-08:00","description":"This should be a 1-2 sentence introductory statement about the project.","headline":"Template Project","image":{"alt":"Site logo","url":"/baumwelt-staging/assets/images/logo-full-2tone.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"/baumwelt-staging/projects/public/template-project/"},"url":"/baumwelt-staging/projects/public/template-project/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -325,7 +327,8 @@
     
     <!-- Site Javascript -->
     <script src="/baumwelt-staging/assets/js/light-dark.js" defer></script>
-    <!-- This value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
+    <!-- The "module" type value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
     <script src="/baumwelt-staging/assets/js/burger-menu.js" type="module"></script>
+    <script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script>
   </body>
 </html>

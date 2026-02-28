@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-22T14:22:36-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Meeting Minutes (2/20/26)</title><link href="/baumwelt-staging/news/meeting-minutes/" rel="alternate" type="text/html" title="Meeting Minutes (2/20/26)" /><published>2026-02-23T00:00:00-08:00</published><updated>2026-02-23T00:00:00-08:00</updated><id>/baumwelt-staging/news/meeting-minutes</id><content type="html" xml:base="/baumwelt-staging/news/meeting-minutes/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/baumwelt-staging/feed.xml" rel="self" type="application/atom+xml" /><link href="/baumwelt-staging/" rel="alternate" type="text/html" /><updated>2026-02-28T14:05:05-08:00</updated><id>/baumwelt-staging/feed.xml</id><title type="html">Baumwelt</title><subtitle>Baumwelt is a landscape architecture firm located in Tacoma, Washington. We are powered by inspired individuals who seek a better world for all.</subtitle><author><name>Alex R. Mann</name></author><entry><title type="html">Meeting Minutes (2/20/26)</title><link href="/baumwelt-staging/news/meeting-minutes/" rel="alternate" type="text/html" title="Meeting Minutes (2/20/26)" /><published>2026-02-23T00:00:00-08:00</published><updated>2026-02-23T00:00:00-08:00</updated><id>/baumwelt-staging/news/meeting-minutes</id><content type="html" xml:base="/baumwelt-staging/news/meeting-minutes/"><![CDATA[<hr />
 <h2 id="key-dates">Key Dates</h2>
 
 <table>
@@ -97,18 +97,22 @@
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scroll-based animation
     <ul class="task-list">
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />“Drawing” a line in (cubic bezier or ease-out)</li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Appear
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />“Drawing” a line in (cubic bezier or ease-out)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Appear
         <ul class="task-list">
-          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fade-in</li>
-          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Rotate-in</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fade-in</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Slide-in</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finalize slide direction and timing</li>
         </ul>
       </li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scroll-snap key sections in About page</li>
     </ul>
   </li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Hover
     <ul class="task-list">
       <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Subtle Resize</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Raise</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Inset on Click</li>
     </ul>
   </li>
 </ul>
@@ -154,7 +158,8 @@
 <h3 id="favicon-">Favicon 🟠</h3>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Two-tone</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Replace white with two-tone blue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Discuss visibility concern</li>
 </ul>
 
 <h3 id="light-dark-theme-">Light-Dark Theme 🟡</h3>

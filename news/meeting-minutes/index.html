@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="no-js">
   <!-- Head -->
   <head>
   <!-- Head Boilerplate -->
@@ -8,7 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Javascript detection script -->
-  <script type="module">document.documentElement.classList.replace('no-js', 'js');</script>
+  <script type="module">
+    document.documentElement.classList.replace('no-js', 'js');
+  </script>
 
   <!-- TODO: Add any external scripts and set the async or defer attribute -->
 
@@ -334,18 +336,22 @@
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scroll-based animation
     <ul class="task-list">
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />“Drawing” a line in (cubic bezier or ease-out)</li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Appear
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />“Drawing” a line in (cubic bezier or ease-out)</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Appear
         <ul class="task-list">
-          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fade-in</li>
-          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Rotate-in</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fade-in</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Slide-in</li>
+          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finalize slide direction and timing</li>
         </ul>
       </li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scroll-snap key sections in About page</li>
     </ul>
   </li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Hover
     <ul class="task-list">
       <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Subtle Resize</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Raise</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Inset on Click</li>
     </ul>
   </li>
 </ul>
@@ -391,7 +397,8 @@
 <h3 id="favicon-">Favicon 🟠</h3>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Two-tone</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Replace white with two-tone blue</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Discuss visibility concern</li>
 </ul>
 
 <h3 id="light-dark-theme-">Light-Dark Theme 🟡</h3>
@@ -526,7 +533,8 @@
     
     <!-- Site Javascript -->
     <script src="/baumwelt-staging/assets/js/light-dark.js" defer></script>
-    <!-- This value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
+    <!-- The "module" type value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
     <script src="/baumwelt-staging/assets/js/burger-menu.js" type="module"></script>
+    <script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script>
   </body>
 </html>
