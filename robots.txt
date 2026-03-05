@@ -1,1 +1,1 @@
-Sitemap: /baumwelt-staging/sitemap.xml
+Sitemap: https://alexrmann.github.io/baumwelt-staging/sitemap.xml
