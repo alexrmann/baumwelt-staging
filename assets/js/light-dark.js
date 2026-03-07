@@ -13,8 +13,8 @@ const logoSrcLt = document.querySelector("#logo-light");
 const logoSrcDk = document.querySelector("#logo-dark");
 const logoImg = document.querySelector("#logo-img");
 
-const logoAssetLt = "/assets/images/logo/logo-stacked-general.png";
-const logoAssetDk = "/assets/images/logo/logo-stacked-darkmode-v2.png";
+const logoAssetLt = "/baumwelt-staging/assets/images/logo/logo-stacked-general.png";
+const logoAssetDk = "/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png";
 
 if (mode === null) switchAuto();
 if (mode === "light") switchLight();
