@@ -187,24 +187,6 @@ html {
   text-size-adjust: none; /* for other mobile browsers */
 }
 
-/* Instead of instantly snapping to same-page anchors and text fragments, scroll-behavior: smooth; enables users to scroll to them smoothly. Also, to cater to those that prefer reduced motion for accessibility reasons, the rule is wrapped in a prefers-reduced-motion: no-preference media query. */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-    interpolate-size: allow-keywords; /* Enable keyword animations */
-  }
-}
-/* We set :focus styles globally by modifying how the outline looks. This means that any element that can receive focus, such as <a> and <button> will have a consistent focus style. The outline-offset pulls the outline away from the content a bit, which in my opinion, makes it more user-friendly. */
-:focus {
-  outline: 1px dotted currentColor;
-  outline-offset: 0.2rem;
-}
-
-/* REMOVE FOCUS OUTLINE FOR MOUSE USERS but keep it for keyboard users. */
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
 /* ADD POINTER CURSOR to interactive elements that don’t already have an alternative cursor. */
 label,
 button,
@@ -1022,8 +1004,18 @@ td {
   scroll-snap-type: y mandatory;
 }
 
-/* ~~~ ACCESSIBILITY CLASSES ~~~ */
-/* Skip Link */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *\
+ * ~~~ ACCESSIBILITY STYLES ~~~ *
+\* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Prefers Reduced Motion ~~~ */
+/* Instead of instantly snapping to same-page anchors and text fragments, scroll-behavior: smooth; enables users to scroll to them smoothly. Also, to cater to those that prefer reduced motion for accessibility reasons, the rule is wrapped in a prefers-reduced-motion: no-preference media query. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    interpolate-size: allow-keywords; /* Enable keyword animations */
+  }
+}
+/* ~~~ Skip Link ~~~ */
 .skip-link {
   display: inline-block;
   padding: 1.25rem 1rem;
@@ -1054,6 +1046,23 @@ td {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+/* ~~~ Focus State ~~~ */
+/* Default Fallback */
+:focus {
+  outline: 2px dotted currentColor;
+  outline-offset: 0.2rem;
+}
+
+/* Remove focus outline for mouse users but keep it for keyboard users. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Provide a bold, clearly visible focus outline for keyboard users. */
+:focus-visible {
+  outline: 9px double var(--ltdk-clr-txt);
 }
 
 :root {
@@ -1505,11 +1514,7 @@ Sets the background and border of the main (central) bar to be transparent, and 
   font-size: var(--font-size-4);
   text-align: center;
   object-fit: contain;
-}
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: drop-shadow(0.25rem 0.25rem 1rem light-dark(rgba(64, 64, 64, 0.5), rgba(0, 0, 0, 0.5)));
-  }
+  filter: drop-shadow(0.25rem 0.25rem 1rem rgba(64, 64, 64, 0.5));
 }
 
 .logo-home {
@@ -1837,14 +1842,14 @@ section.img-card {
   --color-highlight-dark: #ffce32;
   --color-text-dark: #d4d7de;
   --ltmode-clr-bkg: #d4d7de;
-  --ltmode-clr-bkg-grd: radial-gradient(#566db0 30%, #293558);
+  --ltmode-clr-bkg-grd: radial-gradient(#566db0 50%, #293558);
   --ltmode-clr-bkg-bdr: #3e5085;
   --ltmode-clr-bdr: #293558;
   --ltmode-clr-hlt: #566db0;
   --ltmode-clr-hlt-txt: #d4d7de;
   --ltmode-clr-txt: #293558;
   --dkmode-clr-bkg-: #293558;
-  --dkmode-clr-bkg-grd: radial-gradient(#293558 30%, #566db0);
+  --dkmode-clr-bkg-grd: radial-gradient(#293558 50%, #566db0);
   --dkmode-clr-bkg-bdr: #d4d7de;
   --dkmode-clr-bdr: #d4d7de;
   --dkmode-clr-hlt: #ffce32;
@@ -1875,18 +1880,7 @@ mark.highlight {
   background-color: var(--clr-brand-accent);
 }
 
-.background-border {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100vw;
-  height: 100%;
-  border: 8px solid var(--ltdk-clr-bkg-bdr);
-  pointer-events: none;
-}
-
-.background-gradient {
+.bg-gradient {
   position: fixed;
   top: 0;
   left: 0;
@@ -1895,6 +1889,18 @@ mark.highlight {
   height: 100vh;
   height: 100svh;
   height: 100dvh;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.bg-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100%;
+  border: 8px solid var(--ltdk-clr-bkg-bdr);
   pointer-events: none;
 }
 
@@ -1956,17 +1962,23 @@ input[type=radio]:checked + label {
 
 /* Light and Dark Mode Preferences */
 @media (prefers-color-scheme: light) {
-  .background-gradient {
-    background-image: var(--color-bg-gradient-light);
-    mix-blend-mode: hard-light; /* Not functional at this time */
-    opacity: 0.5;
+  .bg-gradient {
+    background-image: var(--ltmode-clr-bkg-grd);
+    mix-blend-mode: hard-light;
+  }
+  .bg-gradient--dark {
+    background-image: var(--dkmode-clr-bkg-grd);
+    mix-blend-mode: difference;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .background-gradient {
-    background-image: var(--color-bg-gradient-dark);
-    mix-blend-mode: difference; /* Not functional at this time */
-    opacity: 0.25;
+  .bg-gradient {
+    background-image: var(--dkmode-clr-bkg-grd);
+    mix-blend-mode: difference;
+  }
+  .bg-gradient--light {
+    background-image: var(--ltmode-clr-bkg-grd);
+    mix-blend-mode: hard-light;
   }
 }
 /* ~~~~~~~~~~~~~~~~~~ *\ 

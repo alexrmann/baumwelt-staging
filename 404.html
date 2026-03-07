@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
-  <!-- Head -->
-  <head>
+  
+  <!-- Head --><head>
   <!-- Head Boilerplate -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -72,18 +72,17 @@
   <link rel="stylesheet" media="print" href="/baumwelt-staging/assets/css/print.css">
   -->
 
-</head>
-
-  <!-- Body -->
-
+</head><!-- Body -->
   <body class="flex flex-column">
+
     <div class="body__background">
-      <div class="background-gradient"></div>
-      <div class="background-border"></div>
+      <div class="bg-gradient"></div>
+      <div class="bg-border"></div>
     </div>
+
     <div class="body__foreground">
-      <!-- Site Header / Banner -->
-      <header 
+
+      <!-- Site Header / Banner --><header 
    
   class="site-header grid grid-center" 
   id="site-header"
@@ -109,20 +108,22 @@
     <!-- TODO: doesn't yet work when manually selecting color scheme -->
     
 
-    <picture>
-      <source
-        srcset="/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png"
+    <picture id="logo-picture">
+      <source 
+        id="logo-light"
+        srcset=/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png
         media="(prefers-color-scheme: light)"
       >
-      <source
-        srcset="/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png"
+      <source 
+        id="logo-dark"
+        srcset=/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png
         media="(prefers-color-scheme: dark)"
       >
       <img
         class="transparent site-title"
         alt="Baumwelt"
         id="logo-img"
-        src="/baumwelt-staging/assets/images/logo/logo-orbital-2tone.png"
+        src=/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png
         fetchpriority="high" />      
     </picture>
 
@@ -192,13 +193,11 @@
     
   </div>
 </header>
-
-
-      <!-- Main Content-->
+<!-- Main Content-->
       <main id="main-content" class="main-content">
         <div class="container container--main">
-          <!-- Page-Specific Content -->
-          <!-- TODO: Figure out whether this should have the flow utility class. -->
+
+          <!-- Page-Specific Content --><!-- TODO: Figure out whether this should have the flow utility class. -->
 <article class="main-article">
   
 
@@ -267,27 +266,19 @@
   });
 </script>
 </li>
-</ul>
-
-<script>
-  
+</ul><script>
   const span = document.createElement('span');
   const back = document.getElementById('back-link');
-
-  span.innerHTML = '<a href="' + document.referrer + '" onclick="history.back(); return false;">Go Back</a>';
-  
+  span.innerHTML = '<a href="' + document.referrer + '" onclick="history.back(); return false;">Go Back</a>';  
   back.appendChild(span);
-
 </script>
 
   </div>
   
-</article>
-        </div>
+</article></div>
       </main>
 
-      <!-- Site Footer / Contentinfo -->
-      <footer class="site-footer">
+      <!-- Site Footer / Contentinfo --><footer class="site-footer">
   <div class="container container--site-footer flex-wrap gap-sm flex-space-between">
 
     <nav class="footer-links font-xl flex" role="navigation" aria-label="Main">
@@ -335,13 +326,15 @@
     </section>
     
   </div>
-</footer>
-    </div>
-    
-    <!-- Site Javascript -->
-    <script src="/baumwelt-staging/assets/js/light-dark.js" defer></script>
-    <!-- The "module" type value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
-    <script src="/baumwelt-staging/assets/js/burger-menu.js" type="module"></script>
-    <script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script>
-  </body>
+</footer></div>
+
+    <!-- Site Javascript --><!-- 
+The "module" type value causes the code to be treated as a JavaScript module. 
+The processing of the script contents is deferred. 
+The charset and defer attributes have no effect. -->
+<script src=/baumwelt-staging/assets/js/light-dark.js></script>
+<script src=/baumwelt-staging/assets/js/burger-menu.js type="module"></script>
+<script src=/baumwelt-staging/assets/js/slider-cards.js type="module"></script>
+<script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script></body>
+
 </html>

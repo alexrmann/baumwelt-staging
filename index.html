@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
-<!-- Head -->
-<head>
+
+<!-- Head --><head>
   <!-- Head Boilerplate -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -72,15 +72,13 @@
   <link rel="stylesheet" media="print" href="/baumwelt-staging/assets/css/print.css">
   -->
 
-</head>
-  <!-- Body -->
+</head><!-- Body -->
   <body class="flex flex-column">
-    <div class="background-gradient"></div>
-    <div class="background-border"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-border"></div>
 
     <!-- Site Header / Banner -->
-    <div class="wrapper wrapper--home-banner">
-      <header 
+    <div class="wrapper wrapper--home-banner"><header 
   
   class="home-header grid grid-center" 
   id="home-header"
@@ -106,13 +104,15 @@
     <!-- TODO: doesn't yet work when manually selecting color scheme -->
     
 
-    <picture>
+    <picture id="logo-picture">
       <source
-        srcset="/baumwelt-staging/assets/images/logo/logo-stacked-general.png"
+        id="logo-light"
+        srcset=/baumwelt-staging/assets/images/logo/logo-stacked-general.png
         media="(prefers-color-scheme: light)"
       >
       <source
-        srcset="/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png"
+        id="logo-dark"
+        srcset=/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png
         media="(prefers-color-scheme: dark)"
       >
 
@@ -120,7 +120,7 @@
         class="transparent site-title"
         alt="Baumwelt"
         id="logo-img"
-        src="/baumwelt-staging/assets/images/logo/logo-stacked-general.png"
+        src=/baumwelt-staging/assets/images/logo/logo-stacked-general.png
         fetchpriority="high" />
     </picture>
 
@@ -193,9 +193,10 @@
     
   </div>
 </header>
+</div>
 
-    </div>
+    <script src=/baumwelt-staging/assets/js/light-dark.js></script>
 
-    <script src="/baumwelt-staging/assets/js/light-dark.js"></script>
   </body>
+
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
-  <!-- Head -->
-  <head>
+  
+  <!-- Head --><head>
   <!-- Head Boilerplate -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -73,18 +73,17 @@
   <link rel="stylesheet" media="print" href="/baumwelt-staging/assets/css/print.css">
   -->
 
-</head>
-
-  <!-- Body -->
-
+</head><!-- Body -->
   <body class="flex flex-column">
+
     <div class="body__background">
-      <div class="background-gradient"></div>
-      <div class="background-border"></div>
+      <div class="bg-gradient"></div>
+      <div class="bg-border"></div>
     </div>
+
     <div class="body__foreground">
-      <!-- Site Header / Banner -->
-      <header 
+
+      <!-- Site Header / Banner --><header 
    
   class="site-header grid grid-center" 
   id="site-header"
@@ -110,20 +109,22 @@
     <!-- TODO: doesn't yet work when manually selecting color scheme -->
     
 
-    <picture>
-      <source
-        srcset="/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png"
+    <picture id="logo-picture">
+      <source 
+        id="logo-light"
+        srcset=/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png
         media="(prefers-color-scheme: light)"
       >
-      <source
-        srcset="/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png"
+      <source 
+        id="logo-dark"
+        srcset=/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png
         media="(prefers-color-scheme: dark)"
       >
       <img
         class="transparent site-title"
         alt="Baumwelt"
         id="logo-img"
-        src="/baumwelt-staging/assets/images/logo/logo-orbital-2tone.png"
+        src=/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png
         fetchpriority="high" />      
     </picture>
 
@@ -193,13 +194,11 @@
     
   </div>
 </header>
-
-
-      <!-- Main Content-->
+<!-- Main Content-->
       <main id="main-content" class="main-content">
         <div class="container container--main">
-          <!-- Page-Specific Content -->
-          <!-- TODO: Figure out whether this should have the flow utility class. -->
+
+          <!-- Page-Specific Content --><!-- TODO: Figure out whether this should have the flow utility class. -->
 <article class="main-article">
   
 
@@ -325,27 +324,18 @@
   </li>
 </ul>
 
-<h3 id="animations-esp-about-page-">Animations (esp. About Page) 🔴</h3>
+<h3 id="scroll-animations-">Scroll Animations 🔴</h3>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scroll-based animation
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Scroll-based animation
     <ul class="task-list">
       <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />“Drawing” a line in (cubic bezier or ease-out)</li>
       <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Appear
         <ul class="task-list">
           <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fade-in</li>
           <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Slide-in</li>
-          <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Finalize slide direction and timing</li>
         </ul>
       </li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scroll-snap key sections in About page</li>
-    </ul>
-  </li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Hover
-    <ul class="task-list">
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Subtle Resize</li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Raise</li>
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Inset on Click</li>
     </ul>
   </li>
 </ul>
@@ -398,7 +388,21 @@
 <h3 id="light-dark-theme-">Light-Dark Theme 🟡</h3>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Investigate bug</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Investigate bug</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fix bug on Home</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fix bug on all other pages</li>
+</ul>
+
+<h3 id="hover-animations-">Hover Animations 🟡</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Hover
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Subtle Resize</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Raise</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Inset on Click</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="call-to-action-">Call to Action 🟡</h3>
@@ -448,9 +452,7 @@
 
 <p>-Alex</p>
 
-<!-- TODO: These tags should be contained within the article itself. -->
-
-<div class="post__tags gap-xxs">
+<!-- TODO: These tags should be contained within the article itself. --><div class="post__tags gap-xxs">
   
   
 
@@ -466,15 +468,12 @@
   
 </div>
 
-
   </div>
   
-</article>
-        </div>
+</article></div>
       </main>
 
-      <!-- Site Footer / Contentinfo -->
-      <footer class="site-footer">
+      <!-- Site Footer / Contentinfo --><footer class="site-footer">
   <div class="container container--site-footer flex-wrap gap-sm flex-space-between">
 
     <nav class="footer-links font-xl flex" role="navigation" aria-label="Main">
@@ -522,13 +521,15 @@
     </section>
     
   </div>
-</footer>
-    </div>
-    
-    <!-- Site Javascript -->
-    <script src="/baumwelt-staging/assets/js/light-dark.js" defer></script>
-    <!-- The "module" type value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. -->
-    <script src="/baumwelt-staging/assets/js/burger-menu.js" type="module"></script>
-    <script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script>
-  </body>
+</footer></div>
+
+    <!-- Site Javascript --><!-- 
+The "module" type value causes the code to be treated as a JavaScript module. 
+The processing of the script contents is deferred. 
+The charset and defer attributes have no effect. -->
+<script src=/baumwelt-staging/assets/js/light-dark.js></script>
+<script src=/baumwelt-staging/assets/js/burger-menu.js type="module"></script>
+<script src=/baumwelt-staging/assets/js/slider-cards.js type="module"></script>
+<script src=/baumwelt-staging/assets/js/intersection-observer.js type="module"></script></body>
+
 </html>
