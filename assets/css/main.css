@@ -1237,6 +1237,10 @@ etc...
   padding: 0;
 }
 
+.wrapper--light-dark-switch {
+  margin-top: 2rem;
+}
+
 .wrapper--home-banner {
   display: flex;
   align-items: center;
@@ -1390,11 +1394,29 @@ html {
   background-color: var(--ltdk-clr-bkg);
   color: var(--ltdk-clr-bkg-bdr);
 }
+.burger-menu[enabled=true] .burger-menu__panel .light-dark-panel {
+  color: var(--ltdk-clr-bkg);
+}
+.burger-menu[enabled=true] .burger-menu__panel .light-dark-panel > label {
+  border: 2px solid var(--ltdk-clr-bkg);
+}
+.burger-menu[enabled=true] .burger-menu__panel .light-dark-panel input[type=radio]:checked + label {
+  border: 4px solid var(--ltdk-clr-bkg);
+}
 
 /* Handle the logo styling */
 .logo--burger-menu {
   max-width: 400px;
   margin-block-end: 3rem;
+}
+
+.burger-menu[enabled=false] .burger-menu__panel {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.burger-menu[enabled=false] .wrapper--light-dark-switch {
+  margin: 0;
 }
 
 .burger-menu[enabled=true] .logo--burger-menu {
@@ -1930,7 +1952,7 @@ input[type=radio] {
   height: 0;
 }
 
-label {
+.light-dark-panel label {
   border: 2px solid light-dark(#293558, #d4d7de);
   border-radius: 0.5rem;
   display: grid;
@@ -1940,23 +1962,23 @@ label {
   width: 80px;
 }
 
-label:hover {
+.light-dark-panel label:hover {
   color: light-dark(var(--color-text-dark), var(--color-text-light));
   background-color: light-dark(#293558, #d4d7de);
 }
 
-label .icon {
+.light-dark-panel label .icon {
   font-size: 1.5rem;
 }
 
-label .label-text {
+.light-dark-panel .label-text {
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
-input[type=radio]:checked + label {
+.light-dark-panel input[type=radio]:checked + label {
   border: 4px solid light-dark(#293558, #d4d7de);
 }
 

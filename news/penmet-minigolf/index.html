@@ -133,11 +133,11 @@
 
 
     
-      <burger-menu max-width="1480">
-  <!-- TODO: Fix the color scheme -->
+      <!-- If burger menu max-width is 1600 or more, it will not display upon resizing window. At 1599, it will display at a consistent position. -->
+<burger-menu max-width="1600">
   
 
-  
+    
 
 <!-- Navigation -->
 
@@ -185,7 +185,36 @@
       </ul>
   </nav>
 
-
+    
+    <div class="wrapper--light-dark-switch">
+          <fieldset class="light-dark-panel">
+      <legend>Select a color mode:</legend>
+      <input
+        onchange="switchAuto()"
+        type="radio"
+        id="auto"
+        name="mode"
+        value="auto"
+      />
+      <label for="auto"><span class="icon">🖥️</span><span class="label-text">OS</span></label>
+      <input
+        onchange="switchLight()"
+        type="radio"
+        id="light"
+        name="mode"
+        value="light"
+      />
+      <label for="light"><span class="icon">☀️</span><span class="label-text">Light</span></label>
+      <input
+        onchange="switchDark()"
+        type="radio"
+        id="dark"
+        name="mode"
+        value="dark"
+      />
+      <label for="dark"><span class="icon">🌙</span><span class="label-text">Dark</span></label>
+    </fieldset>
+    </div>
   
 </burger-menu>
 

@@ -13,14 +13,26 @@ const logoSrcLt = document.querySelector("#logo-light");
 const logoSrcDk = document.querySelector("#logo-dark");
 const logoImg = document.querySelector("#logo-img");
 
-const logoAssetLt = "/baumwelt-staging/assets/images/logo/logo-stacked-general.png";
-const logoAssetDk = "/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png";
+const homeHeader = document.querySelector("#home-header");
+const siteHeader = document.querySelector("#site-header");
 
+let logoAssetLt;
+let logoAssetDk;
+
+if (homeHeader !== null) {
+  logoAssetLt = "/baumwelt-staging/assets/images/logo/logo-stacked-general.png";
+  logoAssetDk = "/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png";
+} else {
+  logoAssetLt = "/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png";
+  logoAssetDk = "/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png";
+}
+
+// Run the color mode switch on mode change
 if (mode === null) switchAuto();
 if (mode === "light") switchLight();
 if (mode === "dark") switchDark();
 
-// three functions used by buttons and radios
+// The three functions used by buttons and radios
 
 function switchAuto() {
   html.style.setProperty("color-scheme", "dark light");
@@ -29,13 +41,11 @@ function switchAuto() {
   localStorage.removeItem("mode");
 
   // Remove any set light or dark classes
-  console.log(bgGradient.classList);
   if (bgGradient.classList.contains("bg-gradient--light")) {
     bgGradient.classList.remove("bg-gradient--light");
   } else {
     bgGradient.classList.remove("bg-gradient--dark");
   };
-  console.log(bgGradient.classList);
 
   logoSrcLt.setAttribute("srcset", logoAssetLt);
   logoSrcDk.setAttribute("srcset", logoAssetDk);
