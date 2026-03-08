@@ -1277,7 +1277,7 @@ html {
 
 .flex-columns {
   --min: 45ch;
-  --gap: 1rem;
+  --gap: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
@@ -1289,7 +1289,7 @@ html {
 
 .grid-columns {
   --min: 45ch;
-  --gap: 1rem;
+  --gap: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
   gap: var(--gap);
@@ -1299,6 +1299,15 @@ html {
   list-style: none;
   text-wrap: balance;
   text-wrap: pretty;
+}
+
+.grid-columns--2 {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1030px) {
+  .grid-columns--2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Burger Menu Styles */
@@ -2164,26 +2173,6 @@ To achieve this, we will initially apply a 'no-js' class to the root element, <h
 /* ~~~~~~~~~~~~ *\ 
     About Page
 \* ~~~~~~~~~~~~ */
-/*
-// .about-flex-columns {
-//   --min: 45ch;
-//   --gap: 2rem;
-//   
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: var(--gap);
-// }
-
-// .about-flex-columns > * {
-//   flex: 1 1 var(--min);
-// }
-
-// .about__section {
-//   height: 90vh;
-//   scroll-snap-align: start;
-//   scroll-padding-top: 4rem;
-// }
-*/
 .section__hgroup--primary {
   margin-bottom: 1rem;
   margin-block-end: 1rem;

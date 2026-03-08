@@ -8,23 +8,27 @@ const osBtn = document.getElementById("auto");
 const ltBtn = document.getElementById("light");
 const dkBtn = document.getElementById("dark");
 
-const logoPic = document.querySelector("#logo-picture");
-const logoSrcLt = document.querySelector("#logo-light");
-const logoSrcDk = document.querySelector("#logo-dark");
-const logoImg = document.querySelector("#logo-img");
+const logoLt = document.querySelectorAll(".logo-light");
+const logoDk = document.querySelectorAll(".logo-dark");
 
 const homeHeader = document.querySelector("#home-header");
 const siteHeader = document.querySelector("#site-header");
+const siteFooter = document.querySelector("#site-footer");
 
-let logoAssetLt;
-let logoAssetDk;
+let logoAssetHdrLt;
+let logoAssetHdrDk;
+let logoAssetFtrLt;
+let logoAssetFtrDk;
 
+// Check if on home or sitewide page and load relevant logo files
 if (homeHeader !== null) {
-  logoAssetLt = "/baumwelt-staging/assets/images/logo/logo-stacked-general.png";
-  logoAssetDk = "/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png";
+  logoAssetHdrLt = "/baumwelt-staging/assets/images/logo/logo-stacked-general.png";
+  logoAssetHdrDk = "/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png";
 } else {
-  logoAssetLt = "/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png";
-  logoAssetDk = "/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png";
+  logoAssetHdrLt = "/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png";
+  logoAssetHdrDk = "/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png";
+  logoAssetFtrLt = "/baumwelt-staging/assets/images/logo/logo-stacked-general.png";
+  logoAssetFtrDk = "/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png";
 }
 
 // Run the color mode switch on mode change
@@ -47,8 +51,21 @@ function switchAuto() {
     bgGradient.classList.remove("bg-gradient--dark");
   };
 
-  logoSrcLt.setAttribute("srcset", logoAssetLt);
-  logoSrcDk.setAttribute("srcset", logoAssetDk);
+  logoLt.forEach(logo => {
+    if (logo.getAttribute("id") === "footer-logo-light") {
+      logo.setAttribute("srcset", logoAssetFtrLt);
+    } else {
+      logo.setAttribute("srcset", logoAssetHdrLt);
+    } 
+  });
+
+  logoDk.forEach(logo => {
+    if (logo.getAttribute("id") === "footer-logo-dark") {
+      logo.setAttribute("srcset", logoAssetFtrDk);
+    } else {
+      logo.setAttribute("srcset", logoAssetHdrDk);
+    } 
+  });
 
   console.log("Operating system preferred color scheme active");
 }
@@ -62,8 +79,20 @@ function switchLight() {
   bgGradient.classList.remove("bg-gradient--dark");
   bgGradient.classList.add("bg-gradient--light");
 
-  logoSrcLt.setAttribute("srcset", logoAssetLt);
-  logoSrcDk.setAttribute("srcset", logoAssetLt);
+  logoLt.forEach(logo => {
+    if (logo.getAttribute("id") === "footer-logo-light") {
+      logo.setAttribute("srcset", logoAssetFtrLt);
+    } else {
+      logo.setAttribute("srcset", logoAssetHdrLt);
+    } 
+  });
+  logoDk.forEach(logo => {
+    if (logo.getAttribute("id") === "footer-logo-dark") {
+      logo.setAttribute("srcset", logoAssetFtrLt);
+    } else {
+      logo.setAttribute("srcset", logoAssetHdrLt);
+    } 
+  });
 
   // Log mode to console
   console.log("Light mode active");
@@ -79,8 +108,20 @@ function switchDark() {
   bgGradient.classList.remove("bg-gradient--light")
   bgGradient.classList.add("bg-gradient--dark")
   
-  logoSrcLt.setAttribute("srcset", logoAssetDk);
-  logoSrcDk.setAttribute("srcset", logoAssetDk);
+  logoLt.forEach(logo => {    
+    if (logo.getAttribute("id") === "footer-logo-light") {
+      logo.setAttribute("srcset", logoAssetFtrDk);
+    } else {
+      logo.setAttribute("srcset", logoAssetHdrDk);
+    } 
+  });
+  logoDk.forEach(logo => {
+    if (logo.getAttribute("id") === "footer-logo-dark") {
+      logo.setAttribute("srcset", logoAssetFtrDk);
+    } else {
+      logo.setAttribute("srcset", logoAssetHdrDk);
+    } 
+  });
 
   // Log mode to console
   console.log("Dark mode active");

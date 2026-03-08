@@ -95,46 +95,32 @@
     "
     >
         <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Site Title and Logo-->
+    <a href="#main-content" class="skip-link">Skip to main content</a><!-- Site Title and Logo-->
 <div 
-  
   class="logo logo-site-header flex flex-center"
-  
   >
-  <a href="/baumwelt-staging/" aria-label="Home page" class="site-title site-head__brand">
-
-    <!-- TODO: doesn't yet work when manually selecting color scheme -->
-    
-
-    <picture id="logo-picture">
+  <a href="/baumwelt-staging/" aria-label="Home page" class="site-title site-head__brand"><picture class="logo-picture">
       <source 
-        id="logo-light"
+        id="banner-logo-light"
+        class="logo-light"
         srcset=/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png
         media="(prefers-color-scheme: light)"
       >
       <source 
-        id="logo-dark"
+        id="banner-logo-dark"
+        class="logo-dark"
         srcset=/baumwelt-staging/assets/images/logo/logo-orbital-darkmode.png
         media="(prefers-color-scheme: dark)"
       >
       <img
-        class="transparent site-title"
+        id="banner-logo-img"
+        class="logo-img transparent site-title"
         alt="Baumwelt"
-        id="logo-img"
         src=/baumwelt-staging/assets/images/logo/logo-orbital-lightmode.png
         fetchpriority="high" />      
-    </picture>
-
-    
-
-  </a>
+    </picture></a>
 </div>
-
-
-    
-      <!-- If burger menu max-width is 1600 or more, it will not display upon resizing window. At 1599, it will display at a consistent position. -->
+<!-- If burger menu max-width is 1600 or more, it will not display upon resizing window. At 1599, it will display at a consistent position. -->
 <burger-menu max-width="1600">
   
 
@@ -218,9 +204,7 @@
     </div>
   
 </burger-menu>
-
-    
-  </div>
+</div>
 </header>
 <!-- Main Content-->
       <main id="main-content" class="main-content">
@@ -251,7 +235,7 @@
 
   <div class="flow"> 
     <hr class="grow-on-scroll">
-<section id="who-we-are" class="page__section about__section">
+<section id="who-we-are" class="page__section">
   <hgroup class="section__hgroup--primary appear-on-scroll">
     <h2 class="section__heading">Who We Are</h2>
     <p class="section__prelude">
@@ -267,7 +251,7 @@
 </section>
 <hr class="grow-on-scroll">
 
-<section id="why-we-build" class="page__section about__section">
+<section id="why-we-build" class="page__section">
   <hgroup class="section__hgroup--primary appear-on-scroll">
     <h2 class="section__heading">Why We Build</h2>
     <p class="section__prelude">
@@ -276,7 +260,7 @@
     </p>
   </hgroup>
   <section class="page__section--inner slide-on-scroll">
-    <ul class="about-lists flow about-flex-columns">
+    <ul class="grid-columns grid-columns--2 about-lists flow">
       <li id="baum-tree">
         <h3>Baum = Tree</h3>
         <p>
@@ -324,7 +308,7 @@
 </section>
 <hr class="grow-on-scroll">
 
-<section id="what-we-build" class="page__section about__section">
+<section id="what-we-build" class="page__section">
   <hgroup class="section__hgroup--primary appear-on-scroll">
     <h2 class="section__heading">What We Build</h2>
     <p class="section__prelude">Baumwelt offers the following services:</p>
@@ -372,7 +356,7 @@
 </section>
 <hr class="grow-on-scroll">
 
-<section id="how-we-build" class="page__section about__section">
+<section id="how-we-build" class="page__section">
   <hgroup class="section__hgroup--primary appear-on-scroll">
     <h2 class="section__heading">How We Build</h2>
     <p class="section__prelude">
@@ -463,7 +447,7 @@
 </article></div>
       </main>
 
-      <!-- Site Footer / Contentinfo --><footer class="site-footer">
+      <!-- Site Footer / Contentinfo --><footer id="site-footer" class="site-footer">
   <div class="container container--site-footer flex-wrap gap-sm flex-space-between">
 
     <nav class="footer-links font-xl flex" role="navigation" aria-label="Main">
@@ -500,9 +484,29 @@
     </nav>
 
     <section class="masthead flex flex-wrap gap-sm">
-      <div class="logo-container flex">
-        <img id="site-logo-footer" src="/baumwelt-staging/assets/images/logo/logo-stacked-2tone-v2.png" alt="Baumwelt logo" class="logo logo--footer transparent flex-end-y"></img>
-      </div>
+      <!-- Site Title and Logo-->
+<div class="logo-container flex">
+  <picture class="logo-picture">
+    <source
+      id="footer-logo-light"
+      class="logo-light"
+      srcset=/baumwelt-staging/assets/images/logo/logo-stacked-general.png
+      media="(prefers-color-scheme: light)"
+    >
+    <source
+      id="footer-logo-dark"
+      class="logo-dark"
+      srcset=/baumwelt-staging/assets/images/logo/logo-stacked-darkmode-v2.png
+      media="(prefers-color-scheme: dark)"
+    >
+    <img 
+      id="footer-logo-img" 
+      src=/baumwelt-staging/assets/images/logo/logo-stacked-2tone-v2.png 
+      alt="Baumwelt logo" 
+      class="logo-img logo logo--footer transparent flex-end-y" />
+  </picture>
+</div>  
+
       <address class="contact-info flow">
         <div class="contact-location">919 MLK Way<br />Tacoma, WA 98405</div>
         <div id="contact--phone"><span>Call or text:</span> <a href="tel:+05890000111">(253) 345-1400</a></div>
