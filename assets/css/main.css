@@ -446,12 +446,6 @@ img {
   font-family: var(--font-sans);
 }
 
-/* HEADER Styles */
-header img {
-  font-family: "Alfa Slab One";
-  font-size: var(--font-size-3);
-}
-
 /* Navigation */
 nav ul,
 nav menu {
@@ -1231,8 +1225,9 @@ etc...
   max-width: 1600px;
 }
 
-.container--site-header {
-  margin: 0 auto;
+.no-js .container--site-header {
+  flex-direction: column;
+  justify-content: center;
 }
 
 @supports (gap: 2rem) {
@@ -1304,7 +1299,7 @@ html {
 }
 
 .body__foreground {
-  min-height: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -1569,12 +1564,18 @@ Sets the background and border of the main (central) bar to be transparent, and 
   text-decoration: none;
 }
 
+.home-title {
+  font-size: 5rem;
+}
+
 .site-title {
-  color: var(--ltdk-clr-txt);
+  font-family: "Alfa Slab One";
+  font-size: var(--font-size-3);
 }
 
 .logo {
   color: light-dark(var(--color-text-light), var(--color-text-dark));
+  font-family: "Alfa Slab One";
   font-weight: bold;
   font-size: var(--font-size-4);
   text-align: center;
@@ -1967,10 +1968,6 @@ mark.highlight {
   height: 100%;
   border: 8px solid var(--ltdk-clr-bkg-bdr);
   pointer-events: none;
-}
-
-h1 {
-  color: light-dark(var(--ltmode-clr-txt), #d4d7de);
 }
 
 .light-dark-panel {
@@ -2495,6 +2492,7 @@ div.post-author {
 
 .search-results {
   list-style: none;
+  margin-top: var(--space-s-m);
 }
 
 /* FEATURED IMAGE */
