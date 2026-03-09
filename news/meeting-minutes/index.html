@@ -6,6 +6,30 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Dark and Light Mode-->
+  <meta name="supported-color-schemes" content="dark light">
+  <!-- Declares dark color-scheme as preferred by placing it first, but respects user's preferences. -->  
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- TODO: See https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color for more information regarding the name="theme-color" attribute. -->
+  <!-- <meta name="theme-color" content="#FF00FF"> -->
+
+  <!-- Favicon -->
+  <!-- At present, this is pulling the dark only. There may need to be a Javascript implementation. Regardless, there should be a default image that will work with both light and dark schemes (see IE Favicon Fallback, and/or add a new default link, or rely on the light favicon being declared last). --><!-- IE Favicon Fallback -->
+<link rel="shortcut icon" href="/baumwelt-staging/favicon.png" type="image/png">
+
+<!-- Modern Favicon Light & Dark Modes -->
+<link 
+  rel="icon" 
+  href="/baumwelt-staging/favicon-light.png" 
+  type="image/png" 
+  media="(prefers-color-scheme: light)">
+<link 
+  rel="icon" 
+  href="/baumwelt-staging/favicon-dark.png" 
+  type="image/png" 
+  media="(prefers-color-scheme: dark)">
 
   <!-- Javascript detection script -->
   <script type="module">
@@ -43,18 +67,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-  <!-- TODO: Modify and create a FAVICONS include template -->
-  <!-- <link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.ico" type="image/x-icon"> -->
-  <link rel="shortcut icon" href="/baumwelt-staging/favicon.png" type="image/png">
-  <!-- <link rel="shortcut icon" href="http://127.0.0.1:4000/favicon.svg" type="image/svg+xml"> -->
-  <!-- <link rel="apple-touch-icon" href="http://127.0.0.1:4000/apple-touch-icon.png"> -->
-
-  <link rel="manifest" href="manifest.json" type="application/json">
-
-  <!-- TODO: See https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color for more information regarding the name="theme-color" attribute. -->
-  <!-- <meta name="theme-color" content="#FF00FF"> -->
-
-  <!-- TODO: Determine if font imports would be better requested here as opposed to CSS @import -->
+  <!-- TODO: Remove comment when ready. -->
+  
 
   <!-- Load Remote Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,9 +77,6 @@
     href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Declares dark color-scheme as preferred by placing it first, but respects user's preferences. -->  
-  <meta name="color-scheme" content="dark light" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" media="screen" href="/baumwelt-staging/assets/css/main.css">
@@ -76,7 +87,7 @@
 </head><!-- Body -->
   <body class="flex flex-column">
 
-    <div class="body__background">
+    <div class="body__background" inert>
       <div class="bg-gradient"></div>
       <div class="bg-border"></div>
     </div>
@@ -84,16 +95,12 @@
     <div class="body__foreground">
 
       <!-- Site Header / Banner --><header 
-   
-  class="site-header grid grid-center" 
   id="site-header"
-  
+  class="site-header grid grid-center"
   >
   <div
     class="container container--site-header 
-    
-    flex flex-wrap flex-space-between flex-center-y
-    "
+    flex flex-wrap flex-space-between flex-center-y"
     >
         <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a><!-- Site Title and Logo-->
@@ -273,7 +280,7 @@
 
 <h2 id="derrick-to-do-list">Derrick To-Do List</h2>
 
-<p>Here’s the remaining content I will need from you to complete the site. Feel free to deliver it in portions, or all at once. I’ll need to receive everything by <strong><em>March 13th</em></strong> to have sufficient time to incorporate it. Anything you can provide early is always welcome! :)</p>
+<p>Here’s the remaining content I will need from you to complete the site. Feel free to deliver it in portions, or all at once. I’ll need to receive everything by <strong>March 13th</strong> to have sufficient time to incorporate it. Anything you can provide early is always welcome! :)</p>
 
 <p>I have marked priority as follows:</p>
 
@@ -353,6 +360,22 @@
   </li>
 </ul>
 
+<h3 id="favicon-">Favicon 🔴</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Replace white with two-tone blue
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Discuss visibility concern
+        <ol>
+          <li>Too dark on dark menu-bar / too light on light menu-bar</li>
+          <li>A “mid-tone” default favicon 🔴</li>
+          <li>A light / dark mode favicon 🟡</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="projects-page-">Projects Page 🔴</h3>
 
 <ul class="task-list">
@@ -375,7 +398,7 @@
   </li>
 </ul>
 
-<h3 id="contact-page--1">Contact Page 🟠</h3>
+<h3 id="contact-page--1">Contact Page 🔴</h3>
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Map</li>
@@ -383,19 +406,18 @@
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Parking</li>
 </ul>
 
-<h3 id="news-">News 🟠</h3>
+<h3 id="page-layout-">Page Layout 🟠</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Menu modal:</strong> Balance the header layout when Javascript is disabled</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Visually distinguish <strong>call-to-action</strong> from preceding content on page</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adjust layout of featured images + separation from text on <strong>project pages</strong> and <strong>news posts</strong></li>
+</ul>
+
+<h3 id="news-">News 🟡</h3>
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Remove dummy content</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adjust handling / style of featured images + separation from text</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Remove meeting minutes</li>
-</ul>
-
-<h3 id="favicon-">Favicon 🟠</h3>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Replace white with two-tone blue</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Discuss visibility concern</li>
 </ul>
 
 <h3 id="light-dark-theme-">Light-Dark Theme 🟡</h3>
@@ -403,8 +425,8 @@
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Investigate bug</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fix bug on Home</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fix bug on all other pages</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Incorporate switch into burger-menu panel</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fix bug on all other pages</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Incorporate switch into burger-menu panel</li>
 </ul>
 
 <h3 id="hover-animations-">Hover Animations 🟡</h3>
@@ -417,12 +439,6 @@
       <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Shadow Inset on Click</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="call-to-action-">Call to Action 🟡</h3>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Visually distinguish from other page content</li>
 </ul>
 
 <hr />

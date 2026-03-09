@@ -292,10 +292,7 @@ p:not(:last-child) {
 
 /* ~~~ Lists ~~~ */
 ul,
-ol {
-  font-family: var(--font-sans);
-}
-
+ol,
 li {
   font-family: var(--font-sans);
 }
@@ -677,7 +674,7 @@ td {
   justify-content: space-around;
 }
 
-/* Flex Positioning */
+/* Flex Justification & Alignment */
 .flex-start-x {
   justify-content: flex-start;
 }
@@ -1000,8 +997,40 @@ td {
 /* .active {
   font-size: x-large;
 } */
-.scroll-snap-y {
+/* ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ SCROLL-SNAP ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~ */
+.scroll-container--x {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.scroll-container--y {
   scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.scroll-item--start {
+  scroll-snap-align: start;
+}
+
+.scroll-item--center {
+  scroll-snap-align: center;
+}
+
+.scroll-item--end {
+  scroll-snap-align: end;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ ELEMENT POSITIONING ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.sticky {
+  position: sticky;
+}
+
+.sticky--top {
+  top: 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *\
@@ -1267,6 +1296,11 @@ etc...
 }
 html {
   height: 100%;
+}
+
+.body__background {
+  pointer-events: none;
+  user-select: none;
 }
 
 .body__foreground {
