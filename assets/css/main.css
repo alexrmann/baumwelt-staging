@@ -1306,7 +1306,7 @@ html {
 
 .flex-columns {
   --min: 45ch;
-  --gap: 2rem;
+  --gap: 3rem;
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
@@ -1318,7 +1318,7 @@ html {
 
 .grid-columns {
   --min: 45ch;
-  --gap: 2rem;
+  --gap: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
   gap: var(--gap);
@@ -1952,6 +1952,7 @@ mark.highlight {
   left: 0;
   z-index: -1;
   width: 100vw;
+  height: 100%;
   height: 100vh;
   height: 100svh;
   height: 100dvh;
@@ -1966,6 +1967,9 @@ mark.highlight {
   z-index: 999;
   width: 100vw;
   height: 100%;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   border: 8px solid var(--ltdk-clr-bkg-bdr);
   pointer-events: none;
 }
@@ -2344,15 +2348,41 @@ button {
   font-family: var(--font-headings);
 }
 
+.wrapper__link {
+  flex: 0 1 auto;
+  max-width: 400px;
+  margin: var(--space-s-l) 0;
+  border: 4px solid light-dark(var(--color-border-light), var(--color-border-dark));
+  background-color: transparent;
+  color: light-dark(var(--color-text-light), var(--color-text-dark));
+  font-family: var(--font-headings);
+}
+
+.wrapper__link:hover {
+  background-color: var(--ltdk-clr-bkg-bdr);
+}
+
+.link--large {
+  display: block;
+  align-self: center;
+  padding: 1rem var(--space-s-m);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.link--large:hover {
+  color: var(--ltdk-clr-bkg);
+}
+
 .nav__list-link {
   display: block;
   align-self: center;
   padding: 1rem var(--space-s-m);
   text-align: center;
   text-decoration: none;
-}
-
-.site-header .nav__list-link {
   font-weight: 500;
 }
 
@@ -2495,7 +2525,7 @@ div.post-author {
   margin-top: var(--space-s-m);
 }
 
-/* FEATURED IMAGE */
+/* FEATURED IMAGES */
 .featured-img {
   flex: 1 1 auto;
 }
@@ -2522,6 +2552,23 @@ div.post-author {
 
 .project-list__item--featured .project-excerpt {
   margin-block-end: 0;
+}
+
+/* ABOUT COMPONENTS */
+.founder-portrait,
+.location-frame {
+  max-width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.headshot--portrait {
+  padding: var(--space-s-m);
+  text-align: center;
+}
+
+.founder-message,
+.location-content {
+  align-self: center;
 }
 
 /* SLIDER */
