@@ -1559,15 +1559,6 @@ Sets the background and border of the main (central) bar to be transparent, and 
   text-decoration: none;
 }
 
-.home-title {
-  font-size: 5rem;
-}
-
-.site-title {
-  font-family: "Alfa Slab One";
-  font-size: var(--font-size-3);
-}
-
 .logo {
   color: light-dark(var(--color-text-light), var(--color-text-dark));
   font-family: "Alfa Slab One";
@@ -1578,15 +1569,26 @@ Sets the background and border of the main (central) bar to be transparent, and 
   filter: drop-shadow(0.25rem 0.25rem 1rem rgba(64, 64, 64, 0.5));
 }
 
-.logo-home {
+.logo--home {
   width: 100%;
   max-width: 800px;
   font-size: var(--font-size-6);
 }
 
-.logo-site-header {
+.logo--site-header {
   max-width: 8rem;
   font-size: var(--font-size-4);
+}
+
+.home-title {
+  font-family: "Alfa Slab One";
+  font-size: 5rem;
+}
+
+.site-title {
+  font-family: "Alfa Slab One";
+  font-size: var(--font-size-3);
+  overflow: visible;
 }
 
 @media screen and (max-width: 750px) {
