@@ -1539,7 +1539,9 @@ Sets the background and border of the main (central) bar to be transparent, and 
     justify-content: start;
   }
 }
-/* HEADER Styles */
+/* ~~~~~~~~~~~~~~~~~~~~~ *\
+/* ~~~ HEADER Styles ~~~ *\
+\* ~~~~~~~~~~~~~~~~~~~~~ */
 .home-header {
   width: 100%;
   padding: 4rem 1rem;
@@ -1559,13 +1561,13 @@ Sets the background and border of the main (central) bar to be transparent, and 
   text-decoration: none;
 }
 
+/* ~~~ Logo Styles ~~~ */
 .logo {
   color: light-dark(var(--color-text-light), var(--color-text-dark));
   font-family: "Alfa Slab One";
   font-weight: bold;
   font-size: var(--font-size-4);
   text-align: center;
-  object-fit: contain;
   filter: drop-shadow(0.25rem 0.25rem 1rem rgba(64, 64, 64, 0.5));
 }
 
@@ -1580,6 +1582,11 @@ Sets the background and border of the main (central) bar to be transparent, and 
   font-size: var(--font-size-4);
 }
 
+.logo-img {
+  height: auto;
+}
+
+/* Control the Alt Text styling */
 .home-title {
   font-family: "Alfa Slab One";
   font-size: 5rem;
