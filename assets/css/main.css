@@ -283,6 +283,7 @@ h6 {
 p {
   font-size: var(--font-size-0);
   font-weight: 400;
+  line-height: 1.675;
 }
 
 p:not(:last-child) {
@@ -2192,11 +2193,11 @@ To achieve this, we will initially apply a 'no-js' class to the root element, <h
   text-wrap: pretty;
 }
 
-.page__section--inner h4 {
+.page__section-inner h4 {
   padding-bottom: 1rem;
   padding-block-end: 1rem;
   border-bottom: 3px solid var(--ltdk-clr-txt);
-  font-weight: 450;
+  font-weight: 400;
 }
 
 /* ~~~~~~~~~~~ *\
@@ -2212,21 +2213,113 @@ To achieve this, we will initially apply a 'no-js' class to the root element, <h
 /* ~~~~~~~~~~~~ *\ 
     About Page
 \* ~~~~~~~~~~~~ */
-.section__hgroup--primary {
-  margin-bottom: 1rem;
-  margin-block-end: 1rem;
-}
-
-.about-lists {
+.about-list {
   list-style: none;
   text-wrap: balance;
   margin-top: 1rem;
   margin-block-start: 1rem;
 }
 
-.about-lists h3 {
+.about-list h3 {
   margin-top: 0;
   margin-block-start: 0;
+}
+
+.about-list__item--why {
+  padding: var(--space-s-m) 0;
+}
+
+.about-list__hgroup {
+  max-width: max(500px, 60% + 1vw);
+}
+
+.about-list__image {
+  background-repeat: no-repeat;
+  background-position: calc(85% + 1vw);
+}
+
+.about-list__image {
+  position: relative;
+  top: max(-100%, -100% - 1vw);
+  height: clamp(100%, 100% + 5vw, 125%);
+  background-size: contain;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+/* Light and Dark Mode Images */
+@media (prefers-color-scheme: light) {
+  .about-list__image--tree {
+    background-image: url("/assets/images/about/tree-light.svg");
+  }
+  .about-list__image--world {
+    background-image: url("/assets/images/about/orbit-light.svg");
+  }
+  .about-list__image--build {
+    background-image: url("/assets/images/about/beehive-light.svg");
+  }
+  .about-list__image--environment {
+    background-image: url("/assets/images/about/six-eyes-light.svg");
+  }
+  .about-list__image {
+    opacity: 0.12;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .about-list__image--tree {
+    background-image: url("/assets/images/about/tree-dark.svg");
+  }
+  .about-list__image--world {
+    background-image: url("/assets/images/about/orbit-dark.svg");
+  }
+  .about-list__image--build {
+    background-image: url("/assets/images/about/beehive-dark.svg");
+  }
+  .about-list__image--environment {
+    background-image: url("/assets/images/about/six-eyes-dark.svg");
+  }
+  .about-list__image {
+    opacity: 0.08;
+  }
+}
+.about-list__image--tree-lt {
+  background-image: url("/assets/images/about/tree-light.svg");
+}
+
+.about-list__image--world-lt {
+  background-image: url("/assets/images/about/orbit-light.svg");
+}
+
+.about-list__image--build-lt {
+  background-image: url("/assets/images/about/beehive-light.svg");
+}
+
+.about-list__image--environment-lt {
+  background-image: url("/assets/images/about/six-eyes-light.svg");
+}
+
+.about-list__image--lt {
+  opacity: 0.12;
+}
+
+.about-list__image--tree-dk {
+  background-image: url("/assets/images/about/tree-dark.svg");
+}
+
+.about-list__image--world-dk {
+  background-image: url("/assets/images/about/orbit-dark.svg");
+}
+
+.about-list__image--build-dk {
+  background-image: url("/assets/images/about/beehive-dark.svg");
+}
+
+.about-list__image--environment-dk {
+  background-image: url("/assets/images/about/six-eyes-dark.svg");
+}
+
+.about-list__image--dk {
+  opacity: 0.08;
 }
 
 /* ~~~~~~~~~~~~ *\ 
