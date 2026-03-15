@@ -2247,81 +2247,6 @@ To achieve this, we will initially apply a 'no-js' class to the root element, <h
   z-index: -1;
 }
 
-/* Light and Dark Mode Images */
-@media (prefers-color-scheme: light) {
-  .about-list__image--tree {
-    background-image: url("/assets/images/about/tree-light.svg");
-  }
-  .about-list__image--world {
-    background-image: url("/assets/images/about/orbit-light.svg");
-  }
-  .about-list__image--build {
-    background-image: url("/assets/images/about/beehive-light.svg");
-  }
-  .about-list__image--environment {
-    background-image: url("/assets/images/about/six-eyes-light.svg");
-  }
-  .about-list__image {
-    opacity: 0.12;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .about-list__image--tree {
-    background-image: url("/assets/images/about/tree-dark.svg");
-  }
-  .about-list__image--world {
-    background-image: url("/assets/images/about/orbit-dark.svg");
-  }
-  .about-list__image--build {
-    background-image: url("/assets/images/about/beehive-dark.svg");
-  }
-  .about-list__image--environment {
-    background-image: url("/assets/images/about/six-eyes-dark.svg");
-  }
-  .about-list__image {
-    opacity: 0.08;
-  }
-}
-.about-list__image--tree-lt {
-  background-image: url("/assets/images/about/tree-light.svg");
-}
-
-.about-list__image--world-lt {
-  background-image: url("/assets/images/about/orbit-light.svg");
-}
-
-.about-list__image--build-lt {
-  background-image: url("/assets/images/about/beehive-light.svg");
-}
-
-.about-list__image--environment-lt {
-  background-image: url("/assets/images/about/six-eyes-light.svg");
-}
-
-.about-list__image--lt {
-  opacity: 0.12;
-}
-
-.about-list__image--tree-dk {
-  background-image: url("/assets/images/about/tree-dark.svg");
-}
-
-.about-list__image--world-dk {
-  background-image: url("/assets/images/about/orbit-dark.svg");
-}
-
-.about-list__image--build-dk {
-  background-image: url("/assets/images/about/beehive-dark.svg");
-}
-
-.about-list__image--environment-dk {
-  background-image: url("/assets/images/about/six-eyes-dark.svg");
-}
-
-.about-list__image--dk {
-  opacity: 0.08;
-}
-
 /* ~~~~~~~~~~~~ *\ 
     News Page
 \* ~~~~~~~~~~~~ */
@@ -2700,7 +2625,6 @@ div.post-author {
   font-size: var(--font-size-1);
 }
 
-/* @use "media-queries"; */
 /* ~~~ DEBUG STYLES ~~~ */
 .debug-fill {
   background-color: 1px solid salmon;
@@ -2708,6 +2632,81 @@ div.post-author {
 
 .debug-border {
   border: 1px solid salmon;
+}
+
+/* Light and Dark Mode Images */
+@media (prefers-color-scheme: light) {
+  .about-list__image--tree {
+    background-image: url(/baumwelt-staging/assets/images/about/tree-light.svg);
+  }
+  .about-list__image--world {
+    background-image: url(/baumwelt-staging/assets/images/about/orbit-light.svg);
+  }
+  .about-list__image--build {
+    background-image: url(/baumwelt-staging/assets/images/about/beehive-light.svg);
+  }
+  .about-list__image--environment {
+    background-image: url(/baumwelt-staging/assets/images/about/six-eyes-light.svg);
+  }
+  .about-list__image {
+    opacity: 0.12;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .about-list__image--tree {
+    background-image: url(/baumwelt-staging/assets/images/about/tree-dark.svg);
+  }
+  .about-list__image--world {
+    background-image: url(/baumwelt-staging/assets/images/about/orbit-dark.svg);
+  }
+  .about-list__image--build {
+    background-image: url(/baumwelt-staging/assets/images/about/beehive-dark.svg);
+  }
+  .about-list__image--environment {
+    background-image: url(/baumwelt-staging/assets/images/about/six-eyes-dark.svg);
+  }
+  .about-list__image {
+    opacity: 0.08;
+  }
+}
+.about-list__image--tree-lt {
+  background-image: url(/baumwelt-staging/assets/images/about/tree-light.svg);
+}
+
+.about-list__image--world-lt {
+  background-image: url(/baumwelt-staging/assets/images/about/orbit-light.svg);
+}
+
+.about-list__image--build-lt {
+  background-image: url(/baumwelt-staging/assets/images/about/beehive-light.svg);
+}
+
+.about-list__image--environment-lt {
+  background-image: url(/baumwelt-staging/assets/images/about/six-eyes-light.svg);
+}
+
+.about-list__image--lt {
+  opacity: 0.12;
+}
+
+.about-list__image--tree-dk {
+  background-image: url(/baumwelt-staging/assets/images/about/tree-dark.svg);
+}
+
+.about-list__image--world-dk {
+  background-image: url(/baumwelt-staging/assets/images/about/orbit-dark.svg);
+}
+
+.about-list__image--build-dk {
+  background-image: url(/baumwelt-staging/assets/images/about/beehive-dark.svg);
+}
+
+.about-list__image--environment-dk {
+  background-image: url(/baumwelt-staging/assets/images/about/six-eyes-dark.svg);
+}
+
+.about-list__image--dk {
+  opacity: 0.08;
 }
 
 /*# sourceMappingURL=main.css.map */
