@@ -2646,7 +2646,7 @@ div.post-author {
     background-image: url(/baumwelt-staging/assets/images/about/beehive-light.svg);
   }
   .about-list__image--environment {
-    background-image: url(/baumwelt-staging/assets/images/about/six-eyes-light.svg);
+    background-image: url(/baumwelt-staging/assets/images/about/eye-light.svg);
   }
   .about-list__image {
     opacity: 0.12;
@@ -2663,7 +2663,7 @@ div.post-author {
     background-image: url(/baumwelt-staging/assets/images/about/beehive-dark.svg);
   }
   .about-list__image--environment {
-    background-image: url(/baumwelt-staging/assets/images/about/six-eyes-dark.svg);
+    background-image: url(/baumwelt-staging/assets/images/about/eye-dark.svg);
   }
   .about-list__image {
     opacity: 0.08;
@@ -2682,7 +2682,7 @@ div.post-author {
 }
 
 .about-list__image--environment-lt {
-  background-image: url(/baumwelt-staging/assets/images/about/six-eyes-light.svg);
+  background-image: url(/baumwelt-staging/assets/images/about/eye-light.svg);
 }
 
 .about-list__image--lt {
@@ -2702,7 +2702,7 @@ div.post-author {
 }
 
 .about-list__image--environment-dk {
-  background-image: url(/baumwelt-staging/assets/images/about/six-eyes-dark.svg);
+  background-image: url(/baumwelt-staging/assets/images/about/eye-dark.svg);
 }
 
 .about-list__image--dk {
