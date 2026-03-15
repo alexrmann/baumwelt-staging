@@ -16,20 +16,29 @@
   <!-- <meta name="theme-color" content="#FF00FF"> -->
 
   <!-- Favicon -->
-  <!-- At present, this is pulling the dark only. There may need to be a Javascript implementation. Regardless, there should be a default image that will work with both light and dark schemes (see IE Favicon Fallback, and/or add a new default link, or rely on the light favicon being declared last). --><!-- IE Favicon Fallback -->
-<link rel="shortcut icon" href="/baumwelt-staging/favicon.png" type="image/png">
+  <!-- TODO: At present, this is pulling the dark only. There may need to be a Javascript implementation. Regardless, there should be a default image that will work with both light and dark schemes (see IE Favicon Fallback, and/or add a new default link, or rely on the light favicon being declared last). --><!-- IE Favicon Fallback -->
+<link rel="icon" href="/baumwelt-staging/favicon.png" type="image/png" />
 
 <!-- Modern Favicon Light & Dark Modes -->
 <link 
+  id="favicon-light" 
   rel="icon" 
-  href="/baumwelt-staging/favicon-light.png" 
+  href="/baumwelt-staging/assets/favicon/favicon-light.png" 
   type="image/png" 
-  media="(prefers-color-scheme: light)">
+  media="(prefers-color-scheme: light)" />
 <link 
+  id="favicon-dark"
   rel="icon" 
-  href="/baumwelt-staging/favicon-dark.png" 
+  href="/baumwelt-staging/assets/favicon/favicon-dark.png" 
   type="image/png" 
-  media="(prefers-color-scheme: dark)">
+  media="(prefers-color-scheme: dark)" />
+
+<!-- Light mode favicons --><link rel="icon" type="image/png" sizes="16x16" href="/baumwelt-staging/assets/favicon/favicon-light-16x16.png" media="(prefers-color-scheme: light)" />
+<link rel="icon" type="image/png" sizes="32x32" href="/baumwelt-staging/assets/favicon/favicon-light-32x32.png" media="(prefers-color-scheme: light)" /><!-- Dark mode favicons --><link rel="icon" type="image/png" sizes="16x16" href="/baumwelt-staging/assets/favicon/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)" />
+<link rel="icon" type="image/png" sizes="32x32" href="/baumwelt-staging/assets/favicon/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)" /><!-- SVG favicons with embedded CSS -->
+<link rel="icon" type="image/svg+xml" sizes="any" href="/baumwelt-staging/assets/favicon/favicon-adaptive.svg" /><link rel="apple-touch-icon" sizes="180x180" href="/baumwelt-staging/assets/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Baumwelt" />
+<link rel="manifest" href="/baumwelt-staging/assets/favicon/site.webmanifest" />
 
   <!-- Javascript detection script -->
   <script type="module">
