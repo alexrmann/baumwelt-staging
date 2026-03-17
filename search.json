@@ -1,30 +1,21 @@
 [
   
     {
+      "title"    : "Introducing Our New Logo",
+      "category" : "",
+      "tags"     : "update, company",
+      "url"      : "baumwelt-staging/news/baumwelt-rebrand/",
+      "date"     : "17 Mar 2026",
+      "excerpt"  : "We are excited to unveil our new logo capturing the spirit and vision of our practice."
+    } ,
+  
+    {
       "title"    : "Meeting Minutes (2/20/26)",
       "category" : "",
       "tags"     : "minutes, company",
       "url"      : "baumwelt-staging/news/meeting-minutes/",
       "date"     : "23 Feb 2026",
       "excerpt"  : "Summary of remaining work and key delivery dates."
-    } ,
-  
-    {
-      "title"    : "Template Post",
-      "category" : "",
-      "tags"     : "tagname, a-multi-word-tag",
-      "url"      : "baumwelt-staging/news/template-news/",
-      "date"     : "22 Feb 2026",
-      "excerpt"  : "This should be a 1-2 sentence introductory statement about the project."
-    } ,
-  
-    {
-      "title"    : "Introducing Our New Logo",
-      "category" : "",
-      "tags"     : "update, company",
-      "url"      : "baumwelt-staging/news/baumwelt-rebrand/",
-      "date"     : "07 Jul 2025",
-      "excerpt"  : "We are excited to unveil our new logo capturing the spirit and vision of our practice."
     } ,
   
     {
