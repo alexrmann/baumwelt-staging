@@ -2343,6 +2343,18 @@ To achieve this, we will initially apply a 'no-js' class to the root element, <h
   font-size: var(--font-size-3);
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *\ 
+    Acknowledgements & Accessibility Statement
+\* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.organization-name,
+.website-name {
+  font-weight: 600;
+}
+
+.conformance-status {
+  font-style: italic;
+}
+
 /* <button> Element Reset */
 /* TODO: Complete <button> element module styles. */
 button {
@@ -2395,14 +2407,16 @@ button {
 .wrapper__link {
   flex: 0 1 auto;
   max-width: 400px;
-  margin-top: var(--space-s-l);
   border: 4px solid light-dark(var(--color-border-light), var(--color-border-dark));
   background-color: transparent;
   color: light-dark(var(--color-text-light), var(--color-text-dark));
-  font-family: var(--font-headings);
 }
 
-.wrapper__link:not(:last-child) {
+.wrapper__link--large {
+  margin-top: var(--space-s-l);
+}
+
+.wrapper__link--large:not(:last-child) {
   margin: var(--space-s-l) 0;
 }
 
@@ -2414,15 +2428,21 @@ button {
   display: block;
   align-self: center;
   padding: 1rem var(--space-s-m);
+  font-family: var(--font-headings);
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
+  font-size: var(--font-size-1);
   font-weight: 500;
   text-wrap: nowrap;
 }
 
 .link--large:hover {
   color: var(--ltdk-clr-bkg);
+}
+
+.jump-link {
+  min-width: min(300px, 100%);
 }
 
 .nav__list-link {
