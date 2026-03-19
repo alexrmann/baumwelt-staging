@@ -3,37 +3,82 @@
     {
       "title"    : "Introducing Our New Logo",
       "category" : "",
-      "tags"     : "update, company",
+      "tags"     : "company",
       "url"      : "baumwelt-staging/news/baumwelt-rebrand/",
       "date"     : "17 Mar 2026",
       "excerpt"  : "We are excited to unveil our new logo capturing the spirit and vision of our practice."
     } ,
   
     {
-      "title"    : "Meeting Minutes (2/20/26)",
+      "title"    : "New Playground Vision for Cor Deo School",
       "category" : "",
-      "tags"     : "minutes, company",
-      "url"      : "baumwelt-staging/news/meeting-minutes/",
-      "date"     : "23 Feb 2026",
-      "excerpt"  : "Summary of remaining work and key delivery dates."
+      "tags"     : "playgrounds, schools, design",
+      "url"      : "baumwelt-staging/news/cor-deo-school-playground/",
+      "date"     : "05 Jan 2026",
+      "excerpt"  : "Site plan coming together for the play landscape at the new Cor Deo School location in Tacoma!"
     } ,
   
     {
-      "title"    : "PenMet Parks Minigolf Update",
+      "title"    : "Puget Sound Baseball Pad & Synthetic Turf Install",
       "category" : "",
-      "tags"     : "project, update",
-      "url"      : "baumwelt-staging/news/penmet-minigolf/",
-      "date"     : "01 May 2025",
+      "tags"     : "sports, sportsfields, baseball, installation",
+      "url"      : "baumwelt-staging/news/puget-sound-baseball-install/",
+      "date"     : "03 Aug 2025",
+      "excerpt"  : "Installation of the Brock shock/drainage pad system and Astroturf Diamond Fiber is underway!"
+    } ,
+  
+    {
+      "title"    : "Accessible Viewing Platform Planned for Port of Tacoma Parcel 37D",
+      "category" : "",
+      "tags"     : "restoration, public, planning, design",
+      "url"      : "baumwelt-staging/news/viewing-platform-port-of-tacoma/",
+      "date"     : "10 May 2025",
+      "excerpt"  : "Design of a new view platform is underway to enhance visitor experience on-site and provide access to a broader cross-section of users."
+    } ,
+  
+    {
+      "title"    : "The Orcas have Breached at PenMet Parks HQ!",
+      "category" : "",
+      "tags"     : "public, minigolf",
+      "url"      : "baumwelt-staging/news/penmet-minigolf-orcas/",
+      "date"     : "10 Apr 2025",
       "excerpt"  : "The first shipment of site features has arrived at the soon to be opening minigolf course."
     } ,
   
     {
-      "title"    : "Spring Update from the Field",
+      "title"    : "Pressbox at Puget Sound Softball",
       "category" : "",
-      "tags"     : "update, project",
-      "url"      : "baumwelt-staging/news/spring-update/",
-      "date"     : "01 Apr 2025",
-      "excerpt"  : "A new season of landscape design is underway at this lakeside villa."
+      "tags"     : "sports, sportsfields, softball, construction",
+      "url"      : "baumwelt-staging/news/puget-sound-softball-pressbox/",
+      "date"     : "01 Jan 2025",
+      "excerpt"  : "This should be a 1-2 sentence introductory statement about the project."
+    } ,
+  
+    {
+      "title"    : "Willow Live Stakes Installed at Lower Wapato Creek Habitat Project",
+      "category" : "",
+      "tags"     : "restoration, planting, installation",
+      "url"      : "baumwelt-staging/news/lower-wapato-creek-live-stakes/",
+      "date"     : "01 Jan 2025",
+      "excerpt"  : "Installation of Live Stakes happening LIVE at Wapato!"
+    } ,
+  
+    {
+      "title"    : "Century-Old Olive Tree Installed at Lakewood Villa Restoration",
+      "category" : "",
+      "tags"     : "private, residential, planting",
+      "url"      : "baumwelt-staging/news/lakewood-villa-olive-tree/",
+      "date"     : "01 Jan 2025",
+      "excerpt"  : "Placement of a California-transplanted olive tree to crown the character of a stately Pacific Northwest lakeside villa"
+    } ,
+  
+    {
+      "title"    : "Givens Sport Courts Dedication",
+      "category" : "",
+      "tags"     : "sports, sport-courts",
+      "url"      : "baumwelt-staging/news/givens-sports-court-dedication/",
+      "date"     : "01 Jan 2025",
+      "excerpt"  : "This should be a 1-2 sentence introductory statement about the project."
     } 
   
 ]
