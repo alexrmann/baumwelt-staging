@@ -2613,6 +2613,7 @@ div.post-author {
   width: 100%;
   flex: 0 0 400px;
   margin-bottom: var(--space-s-l);
+  border: solid 2px light-dark(var(--color-bg-border-light), var(--color-bg-border-dark));
 }
 
 .featured-img--staff {
