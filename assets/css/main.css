@@ -2636,7 +2636,8 @@ div.post-author {
 
 /* ABOUT COMPONENTS */
 .founder-portrait {
-  aspect-ratio: 1/1;
+  display: grid;
+  place-content: center;
 }
 
 .location-frame {
